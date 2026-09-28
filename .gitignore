@@ -1,0 +1,26 @@
+# GeoIP 数据库 (CI 每轮下载, 不入库)
+Country.mmdb
+ASN.mmdb
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# sing-box 内核与临时探测目录 (体积大, CI 每轮现取)
+runtime/
+.test/
+.sb-probe/
+sing-box.exe
+sb.zip
+
+# 单次运行结果产物
+output/e2e_test_report.json
+
+# 本地诊断/研究脚本的中间输出 (脚本本身保留入库)
+scripts/probe_result.json
+scripts/compare_result.json
+scripts/candidates.json
+scripts/new_sources.json
+scripts/openvpn_probe.json
+output-dryrun/
