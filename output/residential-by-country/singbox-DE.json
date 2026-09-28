@@ -1,0 +1,147 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 01 (疑似家宽) - xiaohe",
+      "server": "82.118.19.153",
+      "server_port": 443,
+      "uuid": "adcaa148-7c66-4282-a81a-99ec8afa029d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE",
+          "short_id": "670ed9f350bd8ee0"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 02 (疑似家宽) - xiaohe",
+      "server": "155.117.183.123",
+      "server_port": 443,
+      "uuid": "5dff1842-c02f-4dd4-b1ad-2e597b99dc31",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "de123.mech-pro.online",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4",
+          "short_id": "c42e96a6"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 03 (疑似家宽) - xiaohe",
+      "server": "176.108.241.137",
+      "server_port": 9891,
+      "uuid": "5d16ac22-6eea-426f-b778-6f4c2961faef",
+      "tls": {
+        "enabled": true,
+        "server_name": "dl.google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0",
+          "short_id": "aabb"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-tunnel"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 04 (疑似家宽) - xiaohe",
+      "server": "189.24.106.64",
+      "server_port": 443,
+      "uuid": "82C94E17-B27E-4356-82C1-2F9C79B0CF6D",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway.icloud.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mdNDY7PwSvwt56fQsDQvP15p7XU73PvFoWA6uKgNaX0",
+          "short_id": "13a744172777d168"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇩🇪 德国 (Germany) 05 (疑似家宽) - xiaohe",
+      "server": "13.143.186.29",
+      "server_port": 443,
+      "uuid": "3e2591b2-4739-4c59-b540-344f0b6505ac",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "st2.megabitvpn.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "YTO2eLUPj_pLJijheLCvxg3d53o5BTNSjRSpJKCAa3k",
+          "short_id": "f54ec8b46381247f"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇩🇪 德国 (Germany) 01 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 02 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 03 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 04 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 05 (疑似家宽) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇩🇪 德国 (Germany) 01 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 02 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 03 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 04 (疑似家宽) - xiaohe",
+        "🇩🇪 德国 (Germany) 05 (疑似家宽) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

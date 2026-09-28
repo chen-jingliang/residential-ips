@@ -1,0 +1,846 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇺🇸 美国 (United States) 01 (疑似家宽) - xiaohe
+  server: 172.64.158.146
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tlssecurity=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 02 (疑似家宽) - xiaohe
+  server: 172.64.42.85
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
+  server: 45.159.79.71
+  port: 4443
+  udp: true
+  type: vless
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 321Ii2xbCoyll6WJ0Qm1Sh8qcC0kxXvUaZhe3kyasD8
+    short-id: a1b2c3d4e5f6a7b8
+  servername: sentry.io
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 04 (疑似家宽) - xiaohe
+  server: 172.64.229.170
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tlsfp=chrome
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 05 (疑似家宽) - xiaohe
+  server: 162.159.24.131
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  server: 162.159.0.169
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 07 (疑似家宽) - xiaohe
+  server: 108.162.198.178
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 08 (疑似家宽) - xiaohe
+  server: 162.159.0.53
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: '/?ed=2560security=tls '
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 09 (疑似家宽) - xiaohe
+  server: 162.159.43.187
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 10 (家宽) - xiaohe
+  server: 172.64.52.6
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tlssecurity=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 11 (疑似家宽) - xiaohe
+  server: 162.159.24.131
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 12 (疑似家宽) - xiaohe
+  server: 162.159.48.32
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 13 (疑似家宽) - xiaohe
+  server: 172.64.53.55
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇳🇱 荷兰 (Netherlands) 14 (疑似家宽) - xiaohe
+  server: victoryprovpn-production-2e4c.up.railway.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: e55a46d5-b655-b13a-9edd-3a2769b44d14
+  tls: true
+  servername: victoryprovpn-production-2e4c.up.railway.app
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /ws/e55a46d5-b655-b13a-9edd-3a2769b44d14
+    headers:
+      Host: victoryprovpn-production-2e4c.up.railway.app
+- name: 🇷🇺 俄罗斯 (Russia) 15 (疑似家宽) - xiaohe
+  server: 195.58.48.137
+  port: 40401
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 8ad9d72a5571df86
+- name: 🇹🇼 中国台湾 (Taiwan) 16 (家宽) - xiaohe
+  server: r3mrcg001286ek2.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇳🇱 荷兰 (Netherlands) 17 (疑似家宽) - xiaohe
+  server: victoryprovpn-production-e95a.up.railway.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: b4a433b0-6661-c68d-ad79-1b0b439df694
+  tls: true
+  servername: victoryprovpn-production-e95a.up.railway.app
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /ws/b4a433b0-6661-c68d-ad79-1b0b439df694
+    headers:
+      Host: victoryprovpn-production-e95a.up.railway.app
+- name: 🇳🇱 荷兰 (Netherlands) 18 (疑似家宽) - xiaohe
+  server: 130.78.191.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  tls: true
+  servername: assets-nl.pleiades.codes
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇳🇱 荷兰 (Netherlands) 19 (疑似家宽) R45 - xiaohe
+  server: 193.29.139.179
+  port: 8080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱 荷兰 (Netherlands) 20 (疑似家宽) - xiaohe
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: e2a4dbed-1353-44ac-b4ff-51dcfdc58dcf
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pannn1.global.ssl.fastly.net
+- name: 🇳🇱 荷兰 (Netherlands) 21 (疑似家宽) - xiaohe
+  server: 144.31.225.193
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b
+  tls: true
+  servername: assets-nl3.pleiades.codes
+  skip-cert-verify: false
+  network: grpc
+  grpc-opts:
+    grpc-service-name: cdn.v1.AssetService
+- name: 🇺🇸 美国 (United States) 22 (疑似家宽) - xiaohe
+  server: 136.148.71.151
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: germa12.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 23 (疑似家宽) - xiaohe
+  server: 72.56.92.120
+  port: 443
+  udp: true
+  type: hysteria2
+  password: CnVfXXvMzh
+  sni: hys13.wba-pn.ru
+  skip-cert-verify: true
+- name: 🇮🇶 IQ 24 (疑似家宽) - xiaohe
+  server: 178.17.57.34
+  port: 40443
+  udp: true
+  type: vless
+  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
+    short-id: db46e2946fc466fd
+  servername: deepl.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 25 (疑似家宽) R50 - xiaohe
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3c6d1933-b22a-484b-ac8a-63e24f5fba75
+  tls: true
+  servername: server9.9966338.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /imnotarealherox
+    headers:
+      Host: server9.9966338.xyz
+- name: 🇳🇱 荷兰 (Netherlands) 26 (疑似家宽) - xiaohe
+  server: gfdyg87-production.up.railway.app
+  port: 443
+  udp: true
+  type: vless
+  uuid: fa0db409-8ee1-cdd6-3511-969a528ebf91
+  tls: true
+  servername: gfdyg87-production.up.railway.app
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /ws/fa0db409-8ee1-cdd6-3511-969a528ebf91
+- name: 🇹🇼 中国台湾 (Taiwan) 27 (家宽) - xiaohe
+  server: hinet1.2yly.com
+  port: 24215
+  udp: true
+  type: vless
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
+  tls: true
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  servername: addons.mozilla.org
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 28 (疑似家宽) - xiaohe
+  server: 130.12.242.106
+  port: 443
+  udp: true
+  type: vless
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  servername: deepl.com
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 29 (疑似家宽) - xiaohe
+  server: 87.120.216.144
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0
+    short-id: 0c13e8822e7f58aa
+  servername: gerwai1488.vvzzkontaktezzvv.garden
+  client-fingerprint: safari
+- name: 🇷🇺 俄罗斯 (Russia) 30 (疑似家宽) - xiaohe
+  server: china.letsconnectpoint.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 914f3806-07a1-4158-9624-e183de065a38
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4ubYp4HaBJgn1qXwfo0hiejncurXCckII-O_FMDXTgI
+    short-id: 3b74d85e
+  servername: china.letsconnectpoint.com
+  client-fingerprint: random
+- name: 🇩🇪 德国 (Germany) 31 (疑似家宽) - xiaohe
+  server: 82.118.19.153
+  port: 443
+  udp: true
+  type: vless
+  uuid: adcaa148-7c66-4282-a81a-99ec8afa029d
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
+    short-id: 670ed9f350bd8ee0
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 32 (疑似家宽) - xiaohe
+  server: 199.232.78.159
+  port: 443
+  udp: true
+  type: vless
+  uuid: d6962b1a-4701-4456-ba61-deb28c913a66
+  tls: true
+  servername: ssl.fastly.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: pan2e.global.ssl.fastly.net
+- name: 🇳🇱 荷兰 (Netherlands) 33 (疑似家宽) - xiaohe
+  server: 72.56.102.31
+  port: 443
+  udp: true
+  type: hysteria2
+  password: BWAFlp8g53
+  sni: 72.56.102.31
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 34 (疑似家宽) - xiaohe
+  server: paris.nerabotaet.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 2561c6b1a3069d3170b4d7e1ecc08c65
+  sni: paris.nerabotaet.com
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 35 (疑似家宽) - xiaohe
+  server: 61.111.247.177
+  port: 443
+  udp: true
+  type: vless
+  uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: upzGwN_6mF1HLEIWveelchmljBlEL1fTNNJryHP1h0Q
+    short-id: 57a9322ca488758c
+  servername: gateway.icloud.com
+  client-fingerprint: random
+- name: 🇺🇸 美国 (United States) 36 (疑似家宽) - xiaohe
+  server: 31.76.249.174
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: conge.ggisopi.su
+  client-fingerprint: chrome
+- name: 🇨🇾 塞浦路斯 (Cyprus) 37 (疑似家宽) - xiaohe
+  server: xjp1.mangshe.xyz
+  port: 2060
+  udp: true
+  type: hysteria2
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  sni: xjp1.mangshe.xyz
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 38 (疑似家宽) - xiaohe
+  server: 155.117.183.123
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5dff1842-c02f-4dd4-b1ad-2e597b99dc31
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: CkA-mj6UVyllbl5b8xaSLFfrB7lCot86GZx2tcMbKn4
+    short-id: c42e96a6
+  servername: de123.mech-pro.online
+  client-fingerprint: firefox
+- name: 🇮🇷 IR 39 (疑似家宽) R44 - xiaohe
+  server: 62.60.152.1
+  port: 56328
+  udp: true
+  type: vless
+  uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M
+    short-id: f3a9c21e8b6d4571
+  servername: table.vkroom-it-service.xyz
+  client-fingerprint: random
+- name: 🇫🇮 芬兰 (Finland) 40 (疑似家宽) - xiaohe
+  server: 153.52.117.131
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3d9daa27-6283-406d-a2d4-c6f22c635a14
+  tls: true
+  servername: fi.astrafic.ru
+  skip-cert-verify: false
+  client-fingerprint: safari
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless-grpc
+- name: 🇰🇷 韩国 (South Korea) 41 (疑似家宽) - xiaohe
+  server: 61.111.247.80
+  port: 443
+  udp: true
+  type: vless
+  uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: Cn5_Bic3VFQ2ONvH5_npnbMYZ-oxkl4BxawPKxoRdCQ
+    short-id: f8f2875b3b4cb65b
+  servername: gateway.icloud.com
+  client-fingerprint: random
+- name: 🇮🇱 以色列 (Israel) 42 (疑似家宽) - xiaohe
+  server: 193.169.229.145
+  port: 443
+  udp: true
+  type: vless
+  uuid: 46b3a70b-b99f-4c6e-aa83-df6d842bb954
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 2CwgJn1lc23uxQjAdGphQl4SSRmd1amunSpYXxgCgCM
+    short-id: 7e13fde9
+  servername: isr.vpnskyline.com
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 43 (疑似家宽) - xiaohe
+  server: 45.202.255.24
+  port: 8890
+  udp: true
+  type: vless
+  uuid: 45d87ca1-d006-44ac-b62a-cb03d04c7130
+  tls: true
+  reality-opts:
+    public-key: DcHXqq0OOR8N-bd92fSrMjy2yrcAsG1Es7PesCOc7gc
+  servername: addons.mozilla.org
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+- name: 🇹🇷 土耳其 (Turkey) 44 (移动家宽) - xiaohe
+  server: 145.239.30.17
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇳🇱 荷兰 (Netherlands) 45 (疑似家宽) - xiaohe
+  server: hys9.wba-pn.ru
+  port: 443
+  udp: true
+  type: hysteria2
+  password: wrSuBorIlf
+  sni: hys9.wba-pn.ru
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 46 (疑似家宽) - xiaohe
+  server: 176.108.241.137
+  port: 9891
+  udp: true
+  type: vless
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
+  tls: true
+  reality-opts:
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aabb
+  servername: dl.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-tunnel
+- name: 🇸🇬 新加坡 (Singapore) 47 (家宽) - xiaohe
+  server: s3.huhiuh.space
+  port: 18642
+  udp: true
+  type: hysteria2
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 48 (疑似家宽) - xiaohe
+  server: sakura.proxy.rlwy.net
+  port: 51254
+  udp: true
+  type: vless
+  uuid: 23e642ad-c8fc-4dc4-a0d1-a5b21830cb25
+  network: ws
+  ws-opts:
+    path: /
+- name: 🇰🇷 韩国 (South Korea) 49 (疑似家宽) - xiaohe
+  server: 154.90.62.70
+  port: 56127
+  udp: true
+  type: trojan
+  password: p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B
+  sni: 154.90.62.70
+  skip-cert-verify: true
+- name: 🇹🇷 土耳其 (Turkey) 50 (疑似家宽) - xiaohe
+  server: 78.135.73.47
+  port: 443
+  udp: true
+  type: vless
+  uuid: 25e16692-d097-4e69-9e2d-8415609c1968
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sZAJkAu23wp1WKY-qeaeiwR38izP5OyfhumoE9xhbB8
+    short-id: f46cd3ea3d1eb72d
+  servername: www.datadoghq.com
+  client-fingerprint: random
+- name: 🇳🇱 荷兰 (Netherlands) 51 (疑似家宽) R61 - xiaohe
+  server: 139.64.166.25
+  port: 443
+  udp: true
+  type: vmess
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: pahobac.org
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /linkvws
+    headers:
+      Host: pahobac.org
+- name: 🇪🇸 西班牙 (Spain) 52 (家宽) - xiaohe
+  server: 185.232.205.66
+  port: 443
+  udp: true
+  type: vless
+  uuid: 5dff1842-c02f-4dd4-b1ad-2e597b99dc31
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: sp66.mech-pro.online
+  client-fingerprint: firefox
+- name: 🇨🇾 塞浦路斯 (Cyprus) 53 (疑似家宽) - xiaohe
+  server: india.letsconnectpoint.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: a368752a-32fc-42f3-980a-6b049218b23f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: erUEmyU1QK8y2corQh9bOjk0oHl2Mo6Z9WgoyKg_rC0
+    short-id: c1e3d5d4
+  servername: india.letsconnectpoint.com
+  client-fingerprint: random
+- name: 🇴🇲 OM 54 (疑似家宽) - xiaohe
+  server: 130.94.81.180
+  port: 18415
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: b667234b8d2e7eb34444857ea3a9b18a
+- name: 🇭🇰 中国香港 (Hong Kong) 55 (疑似家宽) - xiaohe
+  server: 2.27.109.179
+  port: 45464
+  udp: true
+  type: trojan
+  password: XuMweB2PWs
+  sni: 2.27.109.179.sslip.io
+  skip-cert-verify: true
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 56 (家宽) - xiaohe
+  server: 89.218.15.90
+  port: 10002
+  udp: true
+  type: vless
+  uuid: 392fcc7e-b995-11f1-a6b7-1b2272a86bd5
+  tls: true
+  servername: kz1.vpnjantit.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vpnjantit
+- name: 🇩🇪 德国 (Germany) 57 (疑似家宽) - xiaohe
+  server: 189.24.106.64
+  port: 443
+  udp: true
+  type: vless
+  uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mdNDY7PwSvwt56fQsDQvP15p7XU73PvFoWA6uKgNaX0
+    short-id: 13a744172777d168
+  servername: gateway.icloud.com
+  client-fingerprint: random
+- name: 🇭🇰 中国香港 (Hong Kong) 58 (疑似家宽) - xiaohe
+  server: ru.xiaoliyu.cyou
+  port: 18333
+  udp: true
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: ru.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 59 (家宽) - xiaohe
+  server: 211.229.56.86
+  port: 30021
+  udp: true
+  type: vless
+  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
+  tls: true
+  servername: 123.714541.xyz
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /Ra-vl
+    headers:
+      Host: 123.714541.xyz
+- name: 🇩🇪 德国 (Germany) 60 (疑似家宽) - xiaohe
+  server: 13.143.186.29
+  port: 443
+  udp: true
+  type: vless
+  uuid: 3e2591b2-4739-4c59-b540-344f0b6505ac
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YTO2eLUPj_pLJijheLCvxg3d53o5BTNSjRSpJKCAa3k
+    short-id: f54ec8b46381247f
+  servername: st2.megabitvpn.org
+  client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 61 (疑似家宽) - xiaohe
+  server: ru1.xiaoliyu.cyou
+  port: 18333
+  udp: true
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: ru1.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: 🇹🇷 土耳其 (Turkey) 62 (家宽) - xiaohe
+  server: upgrade-isl.applemarket13.ir
+  port: 43312
+  udp: true
+  type: vless
+  uuid: 025b65b5-1283-4885-a0de-c8fe889a31fe
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 06vBWFA7tgljTVI9N1pY6L6Ls88me171hrKzeH9-7EQ
+    short-id: 194eb312877c9c35
+  servername: play.google.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇺🇸 美国 (United States) 01 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 02 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 04 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 05 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 07 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 08 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 09 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 10 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 11 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 12 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 13 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 14 (疑似家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 15 (疑似家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 16 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 17 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 18 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 19 (疑似家宽) R45 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 20 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 21 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 22 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 23 (疑似家宽) - xiaohe
+  - 🇮🇶 IQ 24 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 25 (疑似家宽) R50 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 (疑似家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 27 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 28 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 29 (疑似家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 30 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 31 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 32 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 (疑似家宽) - xiaohe
+  - 🇫🇷 法国 (France) 34 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 35 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 36 (疑似家宽) - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 37 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 38 (疑似家宽) - xiaohe
+  - 🇮🇷 IR 39 (疑似家宽) R44 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 40 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 41 (疑似家宽) - xiaohe
+  - 🇮🇱 以色列 (Israel) 42 (疑似家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 43 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 44 (移动家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 45 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 46 (疑似家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 47 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 48 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 49 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 50 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 51 (疑似家宽) R61 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 52 (家宽) - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 53 (疑似家宽) - xiaohe
+  - 🇴🇲 OM 54 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 55 (疑似家宽) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 56 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 57 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 58 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 59 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 60 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 61 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 62 (家宽) - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇺🇸 美国 (United States) 01 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 02 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 04 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 05 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 06 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 07 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 08 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 09 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 10 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 11 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 12 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 13 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 14 (疑似家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 15 (疑似家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 16 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 17 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 18 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 19 (疑似家宽) R45 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 20 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 21 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 22 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 23 (疑似家宽) - xiaohe
+  - 🇮🇶 IQ 24 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 25 (疑似家宽) R50 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 26 (疑似家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 27 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 28 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 29 (疑似家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 30 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 31 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 32 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 33 (疑似家宽) - xiaohe
+  - 🇫🇷 法国 (France) 34 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 35 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 36 (疑似家宽) - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 37 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 38 (疑似家宽) - xiaohe
+  - 🇮🇷 IR 39 (疑似家宽) R44 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 40 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 41 (疑似家宽) - xiaohe
+  - 🇮🇱 以色列 (Israel) 42 (疑似家宽) - xiaohe
+  - 🇯🇵 日本 (Japan) 43 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 44 (移动家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 45 (疑似家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 46 (疑似家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 47 (家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 48 (疑似家宽) - xiaohe
+  - 🇰🇷 韩国 (South Korea) 49 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 50 (疑似家宽) - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 51 (疑似家宽) R61 - xiaohe
+  - 🇪🇸 西班牙 (Spain) 52 (家宽) - xiaohe
+  - 🇨🇾 塞浦路斯 (Cyprus) 53 (疑似家宽) - xiaohe
+  - 🇴🇲 OM 54 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 55 (疑似家宽) - xiaohe
+  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 56 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 57 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 58 (疑似家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 59 (家宽) - xiaohe
+  - 🇩🇪 德国 (Germany) 60 (疑似家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 61 (疑似家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 62 (家宽) - xiaohe
+rules:
+- MATCH,PROXIES
