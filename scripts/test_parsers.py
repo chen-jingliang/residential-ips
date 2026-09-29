@@ -7,9 +7,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import main_v2 as mv
 
 BASEDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SB = os.path.join(BASEDIR, "runtime", "sing-box.exe")  # 与 main_v2 运行时同一内核
+# ★ 与 main_v2 运行时同一内核, 且必须按平台加后缀:
+#   Linux runner 上 main_v2 用的是 runtime/sing-box (无 .exe), 原实现硬编码
+#   ".exe" 导致 CI 上永远找不到内核 → fallback 也不存在 → FileNotFoundError
+#   直接让整个单测步骤变红 (实测 run #8 因此失败)。
+SB = mv.SINGBOX_BIN + (".exe" if os.name == "nt" else "")
 if not os.path.exists(SB):
-    SB = os.path.join(BASEDIR, ".sb-probe", "sing-box.exe")
+    SB = None  # 内核缺失时跳过 sing-box check 阶段, 而不是崩溃
 
 # ══════════ 测试样本 (覆盖用户全部协议) ══════════
 SAMPLES = {
@@ -104,6 +108,12 @@ def run_test():
     print(f"阶段2: sing-box check 配置合法性 ({len(outbounds)} 个 outbound)")
     print("=" * 70)
     import subprocess, tempfile
+    if not SB:
+        print(f"  ⚠️  跳过: 未找到 sing-box 内核 ({mv.SINGBOX_BIN})")
+        print(f"      (CI 中 main_v2.py 会先下载; 本地可手动放一份到 runtime/)")
+        print("=" * 70)
+        print()
+        return
     for name, ob in outbounds.items():
         cfg = mv.build_test_config(ob, 53000 + (hash(name) % 500))
         # 清理测试用多余字段 (domain_strategy 等不存在)
