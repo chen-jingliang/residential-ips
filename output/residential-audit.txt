@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-09-29 19:06:12 UTC
+生成时间: 2026-09-29 20:14:03 UTC
 ==============================================================================
 
 说明:
@@ -15,21 +15,11 @@
   · 复核建议 : 把 exit_ip 贴进 https://scamalytics.com/ip/<IP> 与
                https://bgp.he.net/ip/<IP> 看 ASN 归属是否真是民用运营商
 
-本轮家宽节点数: 2
+本轮家宽节点数: 1
 
-[1] GB  严格家宽  置信度 71
-     exit_ip : 87.192.47.4
-     server  : 87.192.47.10:52006  (vless)
-     ASN     : -
-     ISP     : IBIS
-     ORG     : Imagine Communications Group Limited
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=TakeHost OU asn=AS204785 Raul Ghita trading as 'Ghita Telekom'
-     fraud   : 0  (-1 = 未取到评分)
-
-[2] TR  移动网络  置信度 85
+[1] TR  移动网络  置信度 85
      exit_ip : 2a01:f900:12:216::1
-     server  : 145.239.30.17:2053  (vless)
+     server  : 178.83.46.216:2053  (vless)
      ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
      ISP     : Netlen Internet Hizmetleri Ltd. Sti.
      ORG     : Netlen Internet Hizmetleri Ltd. Sti

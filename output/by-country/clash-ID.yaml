@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
   servername: googleapis.com
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇮🇩 印尼 (Indonesia) 02 - xiaohe
   server: 103.172.197.3
   port: 16006
@@ -27,7 +27,7 @@ proxies:
   reality-opts:
     public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
   servername: www.cloudflare.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
