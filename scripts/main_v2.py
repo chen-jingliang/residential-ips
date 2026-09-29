@@ -2396,6 +2396,17 @@ def classify_and_export(test_results: list):
                 "hetzner", "ovh", "contabo", "leaseweb", "datacamp",
                 "serverius", "clouvider", "m247", "gcore", "g-core",
                 "choopa", "linode", "alibaba", "tencent", "huawei cloud",
+                # ★ 2026-09-30 补 (审计单 #10 实证): 枚举大厂名单永远追不完,
+                #   漏掉的是"名字里就写着机房"的中小托管商。实测案例:
+                #   exit 87.192.47.4 (GB) ip-api 判 hosting=False、org 是
+                #   "Imagine Communications Group Limited" 看着像民用运营商,
+                #   但 ipapi.is 给出 company="TakeHost OU" (AS204785) ——
+                #   这就是家宽专区里混进机房的典型, 现已一票否决。
+                "takehost", "hosting", "host ", " server", "servers",
+                #   注意: 不要用 "colo" —— 会误伤 Colombia / Colorado 等地理名;
+                #   同理 "rack" 仅在末尾匹配更稳妥, 这里用 "rackspace" 精确名。
+                "vps", "dedicated", "datacenter", "data center", "colocation",
+                "rackspace", "cloud", "voxility", "psychz", "quadranet",
             )):
                 n["net_type"] = "datacenter"
                 n["confidence"] = 85
