@@ -128,10 +128,20 @@ SPOOF = [
       "reverse": "dsl-129-064.speakeasy.net", "as": "AS62610 Zenlayer"}, "datacenter"),
 ]
 # ★ 召回增强的自证: ip-api 明确 hosting=false + proxy=false, 但白名单/关键词都无线索
-#   —— 这正是旧逻辑丢失真家宽的重灾区, 现在应落到三级中某一级而非 unknown
+#   —— 这正是旧逻辑丢失真家宽的重灾区。
+#   2026-09-29 精确率修正: "无罪推定"本身不是家宽证据 (ip-api 对未分类 ASN 的
+#   hosting=false 只是"没标过", 不是"确认不是机房")。soft 档现在要求至少一个
+#   弱阳性信号 (动态类 rDNS / 电信类 org), 零信号 → unknown (宁缺毋滥)。
 RECALL = [
+    # 零信号 (无 rDNS、无运营商词) → unknown, 不再无条件 soft
+    # (旧期望 RESIDENTIAL_SOFT; 用户实测反馈 soft 档混入大量小机房, 精确率优先)
     ({"query": "90.200.100.50", "hosting": False, "proxy": False, "mobile": False,
-      "as": "AS199999 TINYISPAB", "asname": "TINYISP-AS", "org": "Tiny ISP Ltd"}, mv.RESIDENTIAL_SOFT),
+      "as": "AS199999 TINYISPAB", "asname": "TINYISP-AS", "org": "Tiny ISP Ltd"}, "unknown"),
+    # 同一组织 + 动态类 rDNS 弱阳性 → 疑似家宽 (soft 档仍有路可走, 只是要证据)
+    # (dhcp 不在主关键词表, 走 6d 弱阳性路径)
+    ({"query": "90.200.100.53", "hosting": False, "proxy": False, "mobile": False,
+      "as": "AS199999 TINYISPAB", "asname": "TINYISP-AS", "org": "Tiny ISP Ltd",
+      "reverse": "dhcp-100-53.tinyisp.example.net"}, mv.RESIDENTIAL_SOFT),
     # 组织名含 telecom → 严格家宽
     ({"query": "90.200.100.51", "hosting": False, "proxy": False, "mobile": False,
       "as": "AS199998 TINYISPTEL", "asname": "TINYISP-AS", "org": "Tiny Telecom Ltd"}, "residential"),

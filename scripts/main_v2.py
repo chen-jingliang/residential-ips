@@ -1506,6 +1506,12 @@ def test_single_node(item, keep_alive_check=True):
             "server": server,
             "port": port,
             "proto": proto,
+            # 凭据指纹: 供去重回填用完整 key (server, port, proto, fp) 精确匹配,
+            # 避免同目标不同凭据的组互相覆盖结果 (死节点被标活 / 活节点被标死)
+            "cred_fp": cred_fingerprint(outbound, proto),
+            # 实测验证过的 outbound: 导出/链式复测优先用它, 而不是从 raw 重解析
+            # (同一 raw 可能解析出多个 outbound, 如 ss 多用户, parsed[0] 未必是测过的那个)
+            "outbound": dict(outbound),
             "alive": True,
             "latency_ms": int(latency_ms),
             "exit_ip": exit_ip,
@@ -1863,13 +1869,27 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
             return "residential", 72
         # 6c) 运营商组织名本身就是消费者宽带/电信公司 → 严格家宽
         #     (走到这里说明: 不在任何 ASN 表、无 rDNS、无关键词, 但 ip-api 说它不是机房)
-        consumer_hint = ("telecom", "telekom", "communications", "broadband",
-                         "internet", "telefonica", "telco")
+        #     2026-09-29 收紧: 去掉 "internet" / "communications" —— 太泛,
+        #     "XX Internet Services" 这类小机房会被误标成严格家宽。
+        #     保留 telecom/broadband 家族 (无机房词 + hosting=false 前提下可信度尚可)。
+        consumer_hint = ("telecom", "telekom", "telefonica", "telco", "broadband")
         if any(k in org_lower for k in consumer_hint):
             return "residential", 71
-        # 6d) 次级判定: 只有"无任何机房证据"这一个弱信号 → 疑似家宽 (名称上标注区分)
+        # 6d) 次级判定 (2026-09-29 收紧): "无罪推定"本身不是家宽证据。
+        #     ip-api 的 hosting=false 对中小机房 / 未分类 ASN 覆盖不全, 无条件放行
+        #     会把大量 VPS 标成"疑似家宽" (实测曾占家宽池八成以上)。
+        #     现在要求至少一个弱阳性信号才给 soft, 否则判 unknown ——
+        #     家宽专区精确率优先于召回率。
         if RES_SOFT_TIER:
-            return RESIDENTIAL_SOFT, 55
+            weak_home = ("dyn", "dynamic", "pool", "dhcp", "cpe", "cable",
+                         "fiber", "fibre", "dsl", "ftth", "fttb", "vdsl",
+                         "broadband", "residential", "home", "subscriber",
+                         "customer", "retail", "wimax", "lte", "5g")
+            weak_isp = ("telecom", "telekom", "telefonica", "telco",
+                        "broadband", "cabletv", "ftth")
+            if any(k in rdns for k in weak_home) or \
+               any(k in org_lower for k in weak_isp):
+                return RESIDENTIAL_SOFT, 55
 
     return "unknown", 30
 
@@ -1879,9 +1899,24 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 # ═══════════════════════════════════════════N═══════════════════════
 
 def outbound_to_clash(node: dict, name: str) -> dict:
-    """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
+    """sing-box outbound → Clash (Meta/mihomo) proxy dict
+    端口跳跃 (Hysteria2 mport) 节点没有 server_port: 用首个区间起始端口,
+    ports 字段保留完整跳跃区间 (见下方 hysteria2 分支)。"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+    server = node.get("server")
+    port = node.get("server_port")
+    if port is None and node.get("server_ports"):
+        # Hysteria2 端口跳跃: server_ports 为 ["20000:30000", "40000:40000"] 列表
+        # (或逗号字符串); Clash 取首个区间起始端口, ports 保留完整区间 (见下方分支)
+        try:
+            first = node["server_ports"]
+            if isinstance(first, (list, tuple)):
+                first = first[0] if first else ""
+            port = int(str(first).split(",")[0].split(":")[0].split("-")[0])
+        except (ValueError, IndexError):
+            port = None
+    if not server or not port:
+        return None
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
@@ -2440,11 +2475,17 @@ def classify_and_export(test_results: list):
     # ★ 链式复测双跳失败的家宽 → 降级普通区 (v2rayN 链式场景不可靠)
     #    保留在总订阅/国家订阅里 (直连场景仍可用), 只是退出家宽专区
 
-    # 重建 outbound (测活阶段的 outbound 已验证可用); 剥离测试专用字段 (detour 等绝不入订阅)
+    # 重建 outbound: 优先用测活阶段实际验证过的 outbound (r["outbound"]),
+    # 同一 raw 可能解析出多个 outbound (如 ss 多用户), parsed[0] 未必是测过的那个;
+    # 剥离测试专用字段 (detour 等绝不入订阅)
     for n in unique_nodes:
-        parsed = parse_node_uri(n["raw"])
-        if parsed:
-            ob = parsed[0]
+        ob = n.get("outbound")
+        if ob:
+            ob = dict(ob)
+        else:
+            parsed = parse_node_uri(n["raw"])
+            ob = parsed[0] if parsed else None
+        if ob:
             ob.pop("detour", None)
             n["outbound"] = ob
         else:
@@ -2486,7 +2527,9 @@ def export_all(unique_nodes, residential, non_residential):
             ob = item["outbound"]
             if not ob:
                 continue
-            links.append(outbound_to_v2ray_link(ob, name))
+            link = outbound_to_v2ray_link(ob, name)
+            if link:  # 空链接 (未知协议/缺端口) 不写入订阅, 避免客户端出现空节点
+                links.append(link)
             cp = outbound_to_clash(ob, name)
             if cp:
                 proxies.append(cp)
@@ -2745,6 +2788,32 @@ export default {{
 # 主流程
 # ═══════════════════════════════════════════N═══════════════════════
 
+def cred_fingerprint(outbound: dict, proto: str) -> str:
+    """连接凭据指纹: 同一 server:port:proto 下区分不同凭据/配置。
+    用于测前去重与测后回填的完整 key (server, port, proto, fingerprint)。
+    注意: 只含"身份凭据", 不含 TLS/SNI/传输等参数 —— 相同凭据不同传输的
+    节点会被视为同一组 (回填时 raw 不同但凭据相同, 服务端行为一致)。"""
+    try:
+        if proto == "vless":
+            return f"{outbound.get('uuid','')}"
+        if proto == "vmess":
+            return f"{outbound.get('uuid','') or outbound.get('user_id','')}"
+        if proto == "trojan":
+            return f"{outbound.get('password','')}"
+        if proto == "shadowsocks":
+            return f"{outbound.get('method','')}|{outbound.get('password','')}"
+        if proto == "hysteria2":
+            return f"{outbound.get('password','') or ''}|{outbound.get('server_ports','')}"
+        if proto == "tuic":
+            return f"{outbound.get('uuid','')}|{outbound.get('password','')}"
+        if proto == "anytls":
+            return f"{outbound.get('password','')}"
+        return json.dumps({k: v for k, v in outbound.items()
+                          if k in ("uuid", "password", "user_id", "method")}, sort_keys=True)
+    except Exception:
+        return ""  # 指纹失败 → 不合并 (宁慢不错)
+
+
 def main():
     t_start = time.time()
     print(f"==== 免费节点测活订阅池 v2 · 启动于 {datetime.now(timezone.utc).isoformat()} ====")
@@ -2773,27 +2842,6 @@ def main():
     #     凭据指纹: uuid/password 各协议的核心身份字段 (vless uuid / vmess id+alterId /
     #               trojan password / ss 2022密钥 / hy2 auth / tuic uuid+passwd / anytls password)
     #     完全相同 = 同一节点被多源重复收录 (免费池常态, 30+ 份不同名字) → 只测一次
-    def cred_fingerprint(outbound: dict, proto: str) -> str:
-        try:
-            if proto == "vless":
-                return f"{outbound.get('uuid','')}"
-            if proto == "vmess":
-                return f"{outbound.get('uuid','') or outbound.get('user_id','')}"
-            if proto == "trojan":
-                return f"{outbound.get('password','')}"
-            if proto == "shadowsocks":
-                return f"{outbound.get('method','')}|{outbound.get('password','')}"
-            if proto == "hysteria2":
-                return f"{outbound.get('password','') or ''}|{outbound.get('server_ports','')}"
-            if proto == "tuic":
-                return f"{outbound.get('uuid','')}|{outbound.get('password','')}"
-            if proto == "anytls":
-                return f"{outbound.get('password','')}"
-            return json.dumps({k: v for k, v in outbound.items()
-                              if k in ("uuid", "password", "user_id", "method")}, sort_keys=True)
-        except Exception:
-            return ""  # 指纹失败 → 不合并 (宁慢不错)
-
     seen_keys, deduped, dup_count = {}, [], 0
     for item in candidates:
         uri, outbound, server, port, proto = item
@@ -2851,20 +2899,21 @@ def main():
     test_results = run_liveness_test(candidates)
 
     # 4.5 ★ 重复节点结果回填: 同 凭据+目标 的重复 URI 继承测活结果 (凭据相同 → 服务端表现一致)
+    #   修复 (2026-09-29): 回填 key 必须与去重 key 完全一致, 含凭据指纹 4 段。
+    #   旧逻辑只用 (server, port, proto) 查找且后写覆盖先写, 同一目标不同凭据的组会
+    #   互相串结果 → 错误凭据的节点被标活 (用户端连不上) / 正确凭据的节点被标死 (被丢弃)。
     if DEDUP_MAP:
         result_by_key = {}
         for r in test_results:
-            key = ((r["server"] or "").lower(), r["port"], r["proto"])
+            key = ((r["server"] or "").lower(), r["port"], r["proto"],
+                   r.get("cred_fp") or "")
             result_by_key[key] = r
         expanded = list(test_results)
         backfilled = 0
-        # 反向索引: server:port:proto → 原始 fingerprint (从 DEDUP_MAP 的 key 直接继承)
         for key, uris in DEDUP_MAP.items():
             if len(uris) <= 1:
                 continue
-            # 用 key 的前三段 (server, port, proto) 找测活结果
-            lookup = (key[0], key[1], key[2])
-            r = result_by_key.get(lookup)
+            r = result_by_key.get(key)  # 完整 4 段 key: 凭据不同不互串
             if not r or not r.get("alive"):
                 continue
             for extra_uri in uris[1:]:
