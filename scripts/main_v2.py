@@ -144,7 +144,9 @@ SINGBOX_BIN = os.path.join(RUNTIME_DIR, "sing-box")
 #   依据 CI 实测: 25 分钟里 ~60% 时间烧在死节点 3×12s 满额重试上
 PROBE_TIMEOUT          = 12      # 活性首击超时 (秒) — 容纳慢启动节点
 PROBE_RETRY_TIMEOUT    = 4       # 活性重试超时 (秒) — 死节点快速放弃
-PORT_KNOCK_TIMEOUT     = 2.5     # 端口预检超时
+PORT_KNOCK_TIMEOUT     = 3.5     # 端口预检超时
+#   2.5 → 3.5s: 家宽节点跑在家庭上传链路上, 首包延迟天然高于机房,
+#   2.5s 会把慢但活着的家宽节点误判成"不可达"硬淘汰掉。
 IP_ECHO_TIMEOUT        = 6.0     # 出口 IP 检测超时
 SPEED_TEST_BYTES       = 2_500_000   # 2.5MB 下载测速 (2.5MB 足以算准吞吐且 < 70KB/s 判定线不变)
 SPEED_TEST_BUDGET      = 5.0         # 测速时间预算 (秒) — 2.5MB@70KB/s=36s 必断流, 5s 预算足够判型
@@ -179,7 +181,10 @@ FRONT_PROXY_ACTIVE  = bool(os.environ.get("FRONT_PROXY", "").strip())
 PREFILTER_DROP_FAILED = os.environ.get(
     "PREFILTER_DROP_FAILED", "1" if not FRONT_PROXY_ACTIVE else "0").strip() in ("1", "true")
 PREFILTER_RETRY      = 2            # 硬淘汰前重试次数 (防单次抖动误杀)
-MAX_TEST_NODES       = int(os.environ.get("MAX_TEST_NODES", "9000"))
+MAX_TEST_NODES       = int(os.environ.get("MAX_TEST_NODES", "14000"))
+#   9000 → 14000: CI #5 实测预检通过 11252 个却只测了 9000, 有 2252 个
+#   压根没进测活就被上限截掉 —— 那些没测的节点里就可能有家宽。
+#   时间可行性: #5 全程 23.9 分钟 / 预算 50 分钟, 尚有 ~26 分钟余量。
 
 # --- 家宽策略 ---
 # 家宽是稀缺资源: 只靠扩大订阅池提升基数不够, 还要提升识别召回率 (详见 classify_network_type)。
@@ -2403,6 +2408,11 @@ def classify_and_export(test_results: list):
     for n in safe_nodes:
         sc = scam_scores.get(n["exit_ip"], -1)
         n["fraud_score"] = sc
+        # ★ 挂载原始情报快照, 供 output/residential-audit.txt 审计导出。
+        #   判定结论必须可复现 —— 否则用户拿到一个标着"家宽"的节点,
+        #   除了盲信没有任何办法验证, 这正是"家宽是不是真的"争议的根源。
+        n["_audit_ipapi"] = ip_api_info.get(n["exit_ip"]) or {}
+        n["_audit_ipapi_is"] = ipapi_verify.get(n["exit_ip"]) or {}
         if _is_res_like(n["net_type"]) and sc >= 75:
             n["net_type"] = "datacenter"  # 高 fraud 分: 大概率代理池滥用 IP
             n["confidence"] = 60
@@ -2526,6 +2536,64 @@ def make_node_name(item, idx, force_residential=False):
     return f"{flag} {cname} {idx:02d}{tag}{risk_tag} - xiaohe"
 
 
+def export_residential_audit(residential, filepath):
+    """导出家宽判定审计单 —— 让"家宽"这个标签可被独立复核, 而非只能盲信。
+
+    背景: 订阅里一个节点标着"(家宽)", 用户看到的却是 URI 里的入口 IP
+    (可能是 Cloudflare CDN 反代), 无从判断出口到底是什么网络, 于是只能怀疑
+    "家宽根本不是真的"。本文件把判定所依据的原始情报全部摊开, 任何人都可以
+    拿 exit_ip 去 ip-api / scamalytics / bgp.he.net 自行复核。
+    """
+    lines = [
+        "=" * 78,
+        "家宽判定审计单 / Residential IP Audit",
+        f"生成时间: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}",
+        "=" * 78,
+        "",
+        "说明:",
+        "  · exit_ip  = sing-box 实测穿透后获取的真实出口 IP (判定的唯一依据)",
+        "  · server   = 订阅 URI 里写的入口地址, 可能是 CDN 反代, 与出口无关",
+        "  · 判定档位 :",
+        "      residential      = 严格家宽 (rDNS/ASN 白名单等强特征)",
+        "      residential_soft = 疑似家宽 (仅弱阳性信号, 可能混有小型 IDC)",
+        "      mobile           = 移动网络",
+        "  · hosting/proxy/mobile 为 ip-api.com 原始字段; fraud 为 Scamalytics 风控分",
+        "    (越高越危险, >=75 会降级出家宽区, >=90 全池剔除)",
+        "  · 复核建议 : 把 exit_ip 贴进 https://scamalytics.com/ip/<IP> 与",
+        "               https://bgp.he.net/ip/<IP> 看 ASN 归属是否真是民用运营商",
+        "",
+        f"本轮家宽节点数: {len(residential)}",
+        "",
+    ]
+    for i, n in enumerate(residential, 1):
+        rec = n.get("_audit_ipapi") or {}
+        vrf = n.get("_audit_ipapi_is") or {}
+        tier = {"residential": "严格家宽",
+                "residential_soft": "疑似家宽",
+                "mobile": "移动网络"}.get(n["net_type"], n["net_type"])
+        lines += [
+            f"[{i}] {n.get('country', '??')}  {tier}  置信度 {n.get('confidence', 0)}",
+            f"     exit_ip : {n.get('exit_ip') or '(未知)'}",
+            f"     server  : {n.get('server')}:{n.get('port')}  ({n.get('proto')})",
+            f"     ASN     : {rec.get('as') or '-'}",
+            f"     ISP     : {rec.get('isp') or '-'}",
+            f"     ORG     : {rec.get('org') or '-'}",
+            f"     ip-api  : hosting={rec.get('hosting')} proxy={rec.get('proxy')} "
+            f"mobile={rec.get('mobile')} reverse={rec.get('reverse') or '-'}",
+            f"     ipapi.is: company={vrf.get('company') or '-'} asn={vrf.get('asn') or '-'}",
+            f"     fraud   : {n.get('fraud_score', -1)}  (-1 = 未取到评分)",
+            "",
+        ]
+    if not residential:
+        lines += ["(本轮无节点通过家宽判定)", ""]
+    try:
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines))
+        print(f"[+] 家宽审计单已导出: {filepath} ({len(residential)} 条)")
+    except Exception as e:
+        print(f"[!] 家宽审计单导出失败: {e}")
+
+
 def export_all(unique_nodes, residential, non_residential):
     ensure_directories()
 
@@ -2569,6 +2637,10 @@ def export_all(unique_nodes, residential, non_residential):
                     os.remove(p)
     else:
         print("[*] 本轮家宽 0 命中, 保留上一版 residential.* (不覆盖、不删除)")
+
+    # 2b) ★ 家宽判定审计单 (可复现证据) —— 无论本轮是否命中都导出
+    #     目的: 判定结论可被任何人拿原始 IP 去第三方独立复核, 而不是只能盲信。
+    export_residential_audit(residential, os.path.join(OUTPUT_DIR, "residential-audit.txt"))
 
     # 3) 按国家 - 普通区
     shutil.rmtree(COUNTRY_DIR, ignore_errors=True)
@@ -2708,6 +2780,19 @@ def update_readme(total_count, res_count):
 > **标注规则**: `(家宽)` = 严格家宽 · `(移动家宽)` = 民用移动网络 · `(疑似家宽)` = 次级判定 (详见下方第 ⑦ 条)
 >
 > **家宽判定七重信号**: ① ip-api.com `hosting` 字段 ② `mobile` 移动网络字段 ③ Cloudflare/主流 CDN Anycast 网段比对 ④ MaxMind GeoLite2 ASN 白/黑名单 (覆盖 80+ 国家主流民用运营商) ⑤ rDNS/ISP 组织名特征 ⑥ Scamalytics 风控评分复核 (fraud ≥75 降级、≥90 剔除) ⑦ **ip-api 显式 `hosting=false` 且 `proxy=false` 的运营商-无罪推定层** —— 静态白名单注定覆盖不全 (全球数万个消费者运营商), 这一层与国家无关, 用于把白名单漏掉的小众国家民用宽带捞回来; 因其只有"无机房证据"这一个弱信号, 命中节点以 `(疑似家宽)` 单独标注, 与严格家宽区分。
+>
+> ### ⚠️ 关于家宽数量，请先读这段
+>
+> **免费公开节点池里真正的家宽极其稀少，请按真实预期使用。** 2026-09-29 CI 实测：785 个通过全部测活的节点中 `datacenter=714 / cdn=24 / unknown=44`，**家宽仅 3 个（约 0.4%）**。这不是漏判，而是免费池的真实构成——公益节点绝大多数跑在廉价 VPS / 云主机上。
+>
+> **判据看的是出口 IP，不是订阅里写的地址**：URI 里的 `server` 常常是 CDN 反代入口（例如 Cloudflare `108.162.x.x`），与真实出口无关。本项目依据的是 sing-box 实测穿透后取到的**真实出口 IP**（`exit_ip`）。所以"订阅里写着 Cloudflare 的 IP、却标着家宽"是 CDN 入口 + 家宽出口的正常组合，并非误判。
+>
+> **判定结论可自查，不必盲信**：每轮生成 [`output/residential-audit.txt`](output/residential-audit.txt)，逐条列出每个家宽节点的 `exit_ip` / ASN / ISP / ORG / ip-api `hosting·proxy·mobile` / ipapi.is 交叉结果 / Scamalytics 风控分 / 判定档位。把 `exit_ip` 贴进 <https://scamalytics.com/ip/…> 或 <https://bgp.he.net/ip/…> 即可独立复核。
+>
+> **已知局限**（调参解决不了）：
+> - `(疑似家宽)` 只基于弱信号，其中必然混有小型 IDC。电信公司同样卖 VPS 和机柜，组织名含 telecom 不能证明该 IP 是家庭宽带。
+> - ip-api 的 `hosting` 字段对小型运营商覆盖不全，双向误差都存在。
+> - 需要**稳定且量大**的真家宽，免费聚合源做不到，只能接住宅代理上游（付费的 rotary residential / 静态住宅 IP）。
 >
 > 三级候选一律还要通过 **ipapi.is 交叉源二次否决 + Scamalytics 欺诈分 + 链式双跳复测** 三道闸门才入库。排除所有云主机/数据中心/CDN 任播, 保留真实民用宽带与移动网络。
 
