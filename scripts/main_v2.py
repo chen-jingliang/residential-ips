@@ -2553,17 +2553,22 @@ def export_all(unique_nodes, residential, non_residential):
     export_singbox_json(all_sb, os.path.join(OUTPUT_DIR, "singbox.json"))
 
     # 2) 家宽总订阅
+    # ★ 2026-09-29: 本轮 0 命中时保留上一版 (不覆盖手动验证文件, 不删除已有 clash/singbox)
+    #    避免池子波动导致订阅被清空; 有命中时正常覆盖更新
     res_links, res_proxies, res_sb = build_group(residential, force_res=True)
-    with open(os.path.join(OUTPUT_DIR, "residential.txt"), "w", encoding="utf-8") as f:
-        f.write(base64.b64encode("\n".join(res_links).encode()).decode())
-    if res_proxies:
-        export_clash_yaml(res_proxies, os.path.join(OUTPUT_DIR, "residential-clash.yaml"))
-        export_singbox_json(res_sb, os.path.join(OUTPUT_DIR, "residential-singbox.json"))
+    if res_links:
+        with open(os.path.join(OUTPUT_DIR, "residential.txt"), "w", encoding="utf-8") as f:
+            f.write(base64.b64encode("\n".join(res_links).encode()).decode())
+        if res_proxies:
+            export_clash_yaml(res_proxies, os.path.join(OUTPUT_DIR, "residential-clash.yaml"))
+            export_singbox_json(res_sb, os.path.join(OUTPUT_DIR, "residential-singbox.json"))
+        else:
+            for fn in ("residential-clash.yaml", "residential-singbox.json"):
+                p = os.path.join(OUTPUT_DIR, fn)
+                if os.path.exists(p):
+                    os.remove(p)
     else:
-        for fn in ("residential-clash.yaml", "residential-singbox.json"):
-            p = os.path.join(OUTPUT_DIR, fn)
-            if os.path.exists(p):
-                os.remove(p)
+        print("[*] 本轮家宽 0 命中, 保留上一版 residential.* (不覆盖、不删除)")
 
     # 3) 按国家 - 普通区
     shutil.rmtree(COUNTRY_DIR, ignore_errors=True)
