@@ -29,7 +29,7 @@ proxies:
     public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
     short-id: a1b2c3d4
   servername: store.steampowered.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇮🇱 以色列 (Israel) 03 - xiaohe
   server: 193.202.10.137
   port: 2291
@@ -42,7 +42,7 @@ proxies:
     public-key: tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg
     short-id: 50ace5ab34f6df9b
   servername: de2.dzvn.space
-  client-fingerprint: random
+  client-fingerprint: firefox
 - name: 🇮🇱 以色列 (Israel) 04 - xiaohe
   server: 193.169.229.145
   port: 443

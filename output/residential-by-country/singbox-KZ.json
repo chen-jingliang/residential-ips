@@ -5,20 +5,20 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "172.67.194.138",
-      "server_port": 443,
-      "uuid": "4908acbe-485f-4e1c-bb11-5dd04b9f7e88",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 (家宽) - xiaohe",
+      "server": "89.218.15.90",
+      "server_port": 10002,
+      "uuid": "392fcc7e-b995-11f1-a6b7-1b2272a86bd5",
       "tls": {
         "enabled": true,
-        "server_name": "restless-base-fe24.alirezahabibi20009.workers.dev",
+        "server_name": "kz1.vpnjantit.com",
         "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/eyJqdW5rIjoiRjhycEV5WUpJTGZpQSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=",
+        "path": "/vpnjantit",
         "headers": {
-          "Host": "restless-base-fe24.alirezahabibi20009.workers.dev"
+          "Host": "kz1.vpnjantit.com"
         }
       }
     },
@@ -27,14 +27,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
