@@ -1602,7 +1602,10 @@ def chain_retest(test_results: list) -> list:
                                      r.get("exit_asn_online"),
                                      r.get("exit_asn_org_online"), rec or None)
         if t in ("residential", "mobile", RESIDENTIAL_SOFT) and c >= 50:
-            res_candidates[(r["server"].lower(), r["port"], r["proto"])] = r
+            # ★ 完整 4 段 key (含凭据指纹): 同目标不同凭据是不同账号,
+            #   各自独立链式复测, 互不塌缩、互不代命
+            res_candidates[(r["server"].lower(), r["port"], r["proto"],
+                            r.get("cred_fp") or "")] = r
 
     if not res_candidates:
         print("[*] 链式复测: 无家宽候选, 跳过")
@@ -1615,7 +1618,8 @@ def chain_retest(test_results: list) -> list:
         key=lambda x: x.get("latency_ms", 99999))
     relay_result = None
     for r in alive_sorted:
-        if (r["server"].lower(), r["port"], r["proto"]) not in res_candidates:
+        if (r["server"].lower(), r["port"], r["proto"], r.get("cred_fp") or "") \
+                not in res_candidates:
             relay_result = r
             break
     if not relay_result:
@@ -1669,8 +1673,13 @@ def chain_retest(test_results: list) -> list:
         os.environ.pop("CHAIN_RELAY_OUT", None)
 
     # 4) 双跳失败的 → 降级普通区 (不从订阅删除, 用户直连场景仍可能可用)
-    for r in chain_dead:
-        r["_chain_failed"] = True
+    #    ★ 降级标记按完整 4 段 key 传播: 回填克隆体 raw 不同但 server/port/proto/
+    #      凭据相同, 行为一致, 必须同步降级 —— 否则克隆体绕过链式复测直接进家宽区
+    failed_keys = {(r["server"].lower(), r["port"], r["proto"], r.get("cred_fp") or "")
+                   for r in chain_dead}
+    for r in test_results:
+        if (r["server"].lower(), r["port"], r["proto"], r.get("cred_fp") or "") in failed_keys:
+            r["_chain_failed"] = True
 
     print(f"[+] 链式复测完成: 双跳可用 {len(chain_alive)} | 双跳失败降级 {len(chain_dead)}")
     return test_results

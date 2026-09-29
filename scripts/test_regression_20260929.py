@@ -118,7 +118,36 @@ if parsed:
 
 print()
 print("=" * 72)
-print("回归 ④: 未知协议导出空链接不入订阅")
+print("回归 ⑤: 链式复测降级标记传播到回填克隆体")
+print("=" * 72)
+# 复刻 chain_retest 尾段的传播逻辑: 同 4 段 key 的克隆体必须同步 _chain_failed
+fp_a = mv.cred_fingerprint({"uuid": "u1"}, "vless")
+chain_dead = [
+    {"server": "1.2.3.4", "port": 443, "proto": "vless", "cred_fp": fp_a,
+     "raw": "vless://u1@1.2.3.4:443"},
+]
+test_results_chain = chain_dead + [
+    {"server": "1.2.3.4", "port": 443, "proto": "vless", "cred_fp": fp_a,
+     "raw": "vless://u1@1.2.3.4:443#clone"},   # 回填克隆体: raw 不同
+    {"server": "1.2.3.4", "port": 443, "proto": "vless",
+     "cred_fp": mv.cred_fingerprint({"uuid": "u2"}, "vless"),
+     "raw": "vless://u2@1.2.3.4:443"},          # 不同凭据: 不应被连带
+]
+failed_keys = {(r["server"].lower(), r["port"], r["proto"], r.get("cred_fp") or "")
+               for r in chain_dead}
+for r in test_results_chain:
+    if (r["server"].lower(), r["port"], r["proto"], r.get("cred_fp") or "") in failed_keys:
+        r["_chain_failed"] = True
+by_raw_chain = {r["raw"]: r.get("_chain_failed") for r in test_results_chain}
+check("代表节点被标记", by_raw_chain.get("vless://u1@1.2.3.4:443") is True)
+check("克隆体同步被标记 (不绕过降级)",
+      by_raw_chain.get("vless://u1@1.2.3.4:443#clone") is True, str(by_raw_chain))
+check("不同凭据节点不受连带",
+      by_raw_chain.get("vless://u2@1.2.3.4:443") is not True, str(by_raw_chain))
+
+print()
+print("=" * 72)
+print("回归 ⑥: 未知协议导出空链接不入订阅")
 print("=" * 72)
 weird = {"type": "ssh", "server": "example.com", "server_port": 22}
 check("未知协议 v2ray 导出为空字符串", mv.outbound_to_v2ray_link(weird, "t") == "")
