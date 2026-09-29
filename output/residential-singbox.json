@@ -5,21 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
-      "server": "108.162.198.178",
-      "server_port": 80,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls ",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 (家宽) - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 01 (家宽) - xiaohe",
       "server": "87.192.47.10",
       "server_port": 52006,
       "uuid": "bc659d88-a1e0-4c65-a49a-7b51b26a7a7f",
@@ -36,18 +22,30 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 03 (家宽) - xiaohe",
-      "server": "155.117.19.17",
-      "server_port": 443,
-      "password": "5fa748137b6d822308eea4611f474ad5",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
+      "server": "hk01.kfc-520.com",
+      "server_port": 60001,
+      "password": "8cb0c4fb-03ee-35b8-a47b-cd1d7e76dfd3",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
-        "insecure": true
+        "server_name": "hk01.kfc-520.com",
+        "insecure": false
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 (家宽) - xiaohe",
+      "server": "89.218.15.90",
+      "server_port": 10002,
+      "uuid": "392fcc7e-b995-11f1-a6b7-1b2272a86bd5",
+      "tls": {
+        "enabled": true,
+        "server_name": "kz1.vpnjantit.com",
+        "insecure": false
       },
-      "obfs": {
-        "type": "salamander",
-        "password": "a39ca173b57ac7021b08bf3e3de9f1f6"
+      "transport": {
+        "type": "ws",
+        "path": "/vpnjantit"
       }
     },
     {
@@ -55,18 +53,18 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 02 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 03 (家宽) - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 01 (家宽) - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 02 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 03 (家宽) - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 01 (家宽) - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
+        "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
