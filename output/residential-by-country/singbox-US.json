@@ -6,8 +6,8 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-      "server": "211.229.56.86",
-      "server_port": 30021,
+      "server": "125.208.247.88",
+      "server_port": 38241,
       "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
       "tls": {
         "enabled": true,
@@ -52,8 +52,8 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 03 (家宽) - xiaohe",
-      "server": "154.9.30.191",
-      "server_port": 18376,
+      "server": "211.229.56.86",
+      "server_port": 30021,
       "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
       "tls": {
         "enabled": true,
@@ -61,7 +61,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {

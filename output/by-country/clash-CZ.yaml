@@ -30,7 +30,7 @@ proxies:
     public-key: j97RCvxVfMu5XWcXuAc4s8TnBTdl8PQrNFrZDQpAkng
     short-id: b415b8d7a6106ace
   servername: nlll.gaz-service.shop
-  client-fingerprint: random
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select

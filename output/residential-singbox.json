@@ -5,14 +5,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe",
-      "server": "169.40.32.73",
-      "server_port": 2053,
-      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
       "server": "hinet1.2yly.com",
       "server_port": 24215,
       "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
@@ -32,9 +25,16 @@
     },
     {
       "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
+      "server": "169.40.32.73",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vless",
       "tag": "🇺🇸 美国 (United States) 03 (家宽) - xiaohe",
-      "server": "211.229.56.86",
-      "server_port": 30021,
+      "server": "125.208.247.88",
+      "server_port": 38241,
       "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
       "tls": {
         "enabled": true,
@@ -79,8 +79,8 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 05 (家宽) - xiaohe",
-      "server": "154.9.30.191",
-      "server_port": 18376,
+      "server": "211.229.56.86",
+      "server_port": 30021,
       "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
       "tls": {
         "enabled": true,
@@ -88,7 +88,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       },
       "transport": {
@@ -104,8 +104,8 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
         "🇺🇸 美国 (United States) 03 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 04 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 05 (家宽) - xiaohe"
@@ -115,8 +115,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
         "🇺🇸 美国 (United States) 03 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 04 (家宽) - xiaohe",
         "🇺🇸 美国 (United States) 05 (家宽) - xiaohe"
