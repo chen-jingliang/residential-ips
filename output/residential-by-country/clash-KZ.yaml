@@ -13,6 +13,7 @@ proxies:
   tls: true
   servername: kz1.vpnjantit.com
   skip-cert-verify: false
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpnjantit
