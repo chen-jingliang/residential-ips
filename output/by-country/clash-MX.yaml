@@ -5,29 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  server: 34.51.29.171
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+- name: 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+  server: mx.tronsg.com
   port: 443
   udp: true
-  type: vless
-  uuid: 9ad81959-02c6-4679-a419-2af6a16ca07a
-  tls: true
-  reality-opts:
-    public-key: 8vHditYTXXNZ37iNTraU4w129svOplF0QUhZwX2n3FA
-    short-id: dcabbf24adf88abc
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
-  server: 45.134.9.133
-  port: 8443
-  udp: true
-  type: vless
-  uuid: a6d20e79-d326-42c1-bc20-f4cecc6dc42d
-  tls: true
-  servername: ul-mexico1.09vpn.com
+  type: trojan
+  password: Trojan@82164024
+  sni: mx.tronsg.com
   skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
 proxy-groups:
 - name: PROXIES
   type: select

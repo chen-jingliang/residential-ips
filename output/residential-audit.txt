@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-09-30 03:39:49 UTC
+生成时间: 2026-09-30 17:58:35 UTC
 ==============================================================================
 
 说明:
@@ -17,52 +17,52 @@
 
 本轮家宽节点数: 5
 
-[1] US  移动网络  置信度 85
-     exit_ip : 192.193.104.22
-     server  : 188.114.97.6:8080  (vless)
-     ASN     : AS25883 Citigroup Inc.
-     ISP     : Citigroup Inc.
-     ORG     : Citibank N.A
+[1] TR  移动网络  置信度 85
+     exit_ip : 2a01:f900:12:216::1
+     server  : 169.40.32.73:2053  (vless)
+     ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
+     ISP     : Netlen Internet Hizmetleri Ltd. Sti.
+     ORG     : Netlen Internet Hizmetleri Ltd. Sti
      ip-api  : hosting=False proxy=False mobile=True reverse=-
-     ipapi.is: company=Citibank N.A. asn=AS25883 Citigroup Inc.
+     ipapi.is: company=Netlen Internet asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
      fraud   : 0  (-1 = 未取到评分)
 
-[2] HK  严格家宽  置信度 82
-     exit_ip : 112.120.221.250
-     server  : f675b7ac-tmeqo0-0-1imi4.hk3.hyhuawei.com:443  (hysteria2)
-     ASN     : AS4760 HKT Limited
-     ISP     : Hong Kong Telecommunications (HKT) Limited Mass Internet
-     ORG     : Hong Kong Telecommunications (HKT) Limited
+[2] TW  严格家宽  置信度 82
+     exit_ip : 118.167.207.194
+     server  : hinet1.2yly.com:24215  (vless)
+     ASN     : AS3462 Data Communication Business Group
+     ISP     : Chunghwa Telecom Co., Ltd.
+     ORG     : Chunghwa Telecom Co. Ltd.
      ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Hong Kong Telecommunications (HKT) Limited Mass Internet asn=AS4760 PCCW IMS Limited
+     ipapi.is: company=Chunghwa Telecom Data Communication Business Group asn=AS3462 Chunghwa Telecom Co., Ltd.
      fraud   : 0  (-1 = 未取到评分)
 
-[3] SG  严格家宽  置信度 82
-     exit_ip : 202.156.27.133
-     server  : s3.huhiuh.space:18642  (hysteria2)
-     ASN     : AS4657 StarHub Ltd
-     ISP     : StarHub Cable Vision Ltd
-     ORG     : SGCABLEVISION
+[3] US  严格家宽  置信度 71
+     exit_ip : 179.254.94.59
+     server  : 211.229.56.86:30021  (vless)
+     ASN     : AS209604 2E TELEKOMUNIKASYON LTD STI
+     ISP     : 2E TELEKOMUNIKASYON LTD STI
+     ORG     : 2E Telekomunikasyon LTD. STI
      ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=StarHub Cable Vision Ltd asn=AS4657 Starhub Ltd.
-     fraud   : 1  (-1 = 未取到评分)
-
-[4] KZ  严格家宽  置信度 82
-     exit_ip : 89.218.15.90
-     server  : 89.218.15.90:10002  (vless)
-     ASN     : AS9198 JSC Kazakhtelecom
-     ISP     : Kazakhtelecom Data Network Administration
-     ORG     : Nur-Sultan
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Nur-Sultan asn=AS9198 JSC Kazakhtelecom
+     ipapi.is: company=2E Telekomunikasyon LTD. STI. asn=AS209604 2E TELEKOMUNIKASYON LTD STI
      fraud   : 0  (-1 = 未取到评分)
 
-[5] HK  严格家宽  置信度 82
-     exit_ip : 209.9.201.153
-     server  : hk01.kfc-520.com:60001  (hysteria2)
-     ASN     : AS4760 HKT Limited
-     ISP     : Netvigator
-     ORG     : HKT
+[4] US  严格家宽  置信度 71
+     exit_ip : 179.254.94.59
+     server  : 103.21.220.248:29608  (vless)
+     ASN     : AS209604 2E TELEKOMUNIKASYON LTD STI
+     ISP     : 2E TELEKOMUNIKASYON LTD STI
+     ORG     : 2E Telekomunikasyon LTD. STI
      ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=PCCW Global (HK) Limited asn=AS4760 PCCW IMS Limited
+     ipapi.is: company=2E Telekomunikasyon LTD. STI. asn=AS209604 2E TELEKOMUNIKASYON LTD STI
+     fraud   : 0  (-1 = 未取到评分)
+
+[5] US  严格家宽  置信度 71
+     exit_ip : 179.254.94.59
+     server  : 154.9.30.191:18376  (vless)
+     ASN     : AS209604 2E TELEKOMUNIKASYON LTD STI
+     ISP     : 2E TELEKOMUNIKASYON LTD STI
+     ORG     : 2E Telekomunikasyon LTD. STI
+     ip-api  : hosting=False proxy=False mobile=False reverse=-
+     ipapi.is: company=2E Telekomunikasyon LTD. STI. asn=AS209604 2E TELEKOMUNIKASYON LTD STI
      fraud   : 0  (-1 = 未取到评分)
