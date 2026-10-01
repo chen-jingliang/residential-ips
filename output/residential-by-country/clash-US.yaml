@@ -5,15 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  server: 125.208.247.88
-  port: 38241
+  server: 154.9.30.191
+  port: 18376
   udp: true
   type: vless
   uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
   tls: true
   servername: 123.714541.xyz
   skip-cert-verify: false
-  client-fingerprint: random
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /Ra-vl
