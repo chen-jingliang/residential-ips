@@ -6,48 +6,21 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-      "server": "125.208.247.88",
-      "server_port": 38241,
-      "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
+      "server": "140.150.227.51",
+      "server_port": 443,
+      "uuid": "a15d1b88-e3f4-4f4d-9c04-462a2965a60a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "123.714541.xyz",
-        "insecure": true,
+        "server_name": "us51.mech-pro.online",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Ra-vl",
-        "headers": {
-          "Host": "123.714541.xyz"
+          "fingerprint": "firefox"
         },
-        "max_early_data": 2560,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 02 (家宽) - xiaohe",
-      "server": "154.9.30.191",
-      "server_port": 18376,
-      "uuid": "88ee0e1e-a2a2-477e-88ce-4875c058aeba",
-      "tls": {
-        "enabled": true,
-        "server_name": "123.714541.xyz",
-        "insecure": false,
-        "utls": {
+        "reality": {
           "enabled": true,
-          "fingerprint": "random"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/Ra-vl",
-        "headers": {
-          "Host": "123.714541.xyz"
+          "public_key": "jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI",
+          "short_id": "16e0f049"
         }
       }
     },
@@ -56,16 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 02 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-        "🇺🇸 美国 (United States) 02 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
