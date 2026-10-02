@@ -26,31 +26,14 @@
     {
       "type": "vless",
       "tag": "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-      "server": "185.47.254.251",
-      "server_port": 443,
-      "uuid": "878fb7f7-fc65-465e-a352-17c7216c6f3d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "gateway.icloud.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q",
-          "short_id": "6c059ecfddf9b179"
-        }
+      "server": "moblemangol.ir",
+      "server_port": 2082,
+      "uuid": "6a219111-9ee4-4a7a-b9df-af0a33918cb2",
+      "transport": {
+        "type": "httpupgrade",
+        "path": "/",
+        "host": "usiii.zendegizibast.ir"
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇲🇽 墨西哥 (Mexico) 03 - xiaohe",
-      "server": "64.177.90.30",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "BWyPPTusFKhGgzKh"
     },
     {
       "type": "selector",
@@ -58,8 +41,7 @@
       "outbounds": [
         "auto",
         "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 03 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
       ]
     },
     {
@@ -67,8 +49,7 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 03 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
