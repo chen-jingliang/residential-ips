@@ -24,32 +24,18 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇲🇽 墨西哥 (Mexico) 02 - xiaohe",
-      "server": "moblemangol.ir",
-      "server_port": 2082,
-      "uuid": "6a219111-9ee4-4a7a-b9df-af0a33918cb2",
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/",
-        "host": "usiii.zendegizibast.ir"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-        "🇲🇽 墨西哥 (Mexico) 02 - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

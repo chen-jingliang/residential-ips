@@ -16,30 +16,17 @@ proxies:
     short-id: 65f01b4b99e52015
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
-  server: moblemangol.ir
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 6a219111-9ee4-4a7a-b9df-af0a33918cb2
-  network: httpupgrade
-  httpupgrade-opts:
-    path: /
-    headers:
-      Host: usiii.zendegizibast.ir
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
 rules:
 - MATCH,PROXIES
