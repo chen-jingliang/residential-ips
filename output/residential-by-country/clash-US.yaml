@@ -5,33 +5,27 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
-  server: us51.mech-pro.online
-  port: 443
+  server: 104.18.46.46
+  port: 2082
   udp: true
   type: vless
-  uuid: a15d1b88-e3f4-4f4d-9c04-462a2965a60a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
-    short-id: 16e0f049
-  servername: us51.mech-pro.online
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
-  server: 154.9.30.191
-  port: 18376
-  udp: true
-  type: vless
-  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
-  tls: true
-  servername: 123.714541.xyz
-  skip-cert-verify: false
-  client-fingerprint: random
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /Ra-vl
+    path: /
     headers:
-      Host: 123.714541.xyz
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
+  server: 162.159.24.131
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
   server: 103.21.220.248
   port: 29608
@@ -47,6 +41,21 @@ proxies:
     path: /Ra-vl
     headers:
       Host: 123.714541.xyz
+- name: 🇺🇸 美国 (United States) 04 (家宽) - xiaohe
+  server: 154.9.30.191
+  port: 18376
+  udp: true
+  type: vless
+  uuid: 88ee0e1e-a2a2-477e-88ce-4875c058aeba
+  tls: true
+  servername: 123.714541.xyz
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /Ra-vl
+    headers:
+      Host: 123.714541.xyz
 proxy-groups:
 - name: PROXIES
   type: select
@@ -55,6 +64,7 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 04 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,5 +73,6 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 03 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 04 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
