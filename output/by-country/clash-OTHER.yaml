@@ -5,19 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: cctvhikvision.center
-  port: 2053
+  server: 172.67.153.156
+  port: 443
   udp: true
   type: vless
-  uuid: e3fb01b6-69b4-41d7-babf-696d992de194
+  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
   tls: true
-  servername: uwu.blueknightnet.qzz.io
+  servername: ccs2g.pai50288.uk
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
+    path: /pai50288
     headers:
-      Host: uwu.blueknightnet.qzz.io
+      Host: ccs2g.pai50288.uk
 proxy-groups:
 - name: PROXIES
   type: select

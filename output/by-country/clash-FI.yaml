@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: 144.31.232.216
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
-  sni: fi01.clgate.network
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
   server: 151.241.137.132
   port: 443
   udp: true
@@ -23,7 +15,19 @@ proxies:
   reality-opts:
     public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
   servername: finland.ali-bard.online
-  client-fingerprint: edge
+  client-fingerprint: qq
+- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
+  server: 95.216.27.15
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
+  tls: true
+  reality-opts:
+    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
+    short-id: d368b94e275ab080
+  servername: www.google.com
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: 144.31.27.215
   port: 43000
@@ -36,48 +40,16 @@ proxies:
     public-key: dxCQnOekn14riFxt3vdwDNydvW47FsmwFG6BJ2mUgEg
     short-id: 568d87a47271344e
   servername: 144.31.27.215
-  client-fingerprint: random
-- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 1c81f6d3-5771-4c5d-9fdd-1655eff50634
-  tls: true
-  reality-opts:
-    public-key: 4nfogj5mHqNowtSn_2sXS3xTX8vcH75rFEU2BWvyekM
-    short-id: d368b94e275ab080
-  servername: www.google.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  server: fi1.rovilo.ir
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  server: 144.31.232.216
   port: 443
   udp: true
-  type: vless
-  uuid: 452f869f-7720-47c3-a175-b6673e31d3e8
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: i_cD6qpNHvE-j2vFGxEBmXNvX5U8PE4-lBkxcti8Ry8
-    short-id: 714369014b7679bf
-  servername: store.steampowered.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: 78.17.11.109
-  port: 8443
-  udp: true
-  type: vless
-  uuid: f3462e4a-aabe-4f73-97bb-573b706644f7
-  tls: true
-  servername: cdn.fwqfw783rg2dad.website
+  type: hysteria2
+  password: 06e88dd6-e264-4981-8c26-d7ab17348ab2
+  sni: fi01.clgate.network
   skip-cert-verify: false
-  client-fingerprint: android
-  network: ws
-  ws-opts:
-    path: /websocket
-    headers:
-      Host: cdn.fwqfw783rg2dad.website
-- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
+- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
   server: 144.31.212.253
   port: 443
   udp: true
@@ -85,6 +57,19 @@ proxies:
   password: cf83b611-6cba-4535-adcb-8da06c6a9146
   sni: vps155-edge.kermemehori.ru
   skip-cert-verify: false
+- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  server: 2.27.207.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: a5dd2dd9-0995-449e-be67-4a409890dc42
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nG28Y1q-Ul2oBH-FegAkzGtvY6IRCIwras1k8CLwdGo
+    short-id: da4d87fa
+  servername: jdbdb.huinaduok.fans
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -96,7 +81,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
   - 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -108,6 +92,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
   - 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
 rules:
 - MATCH,PROXIES

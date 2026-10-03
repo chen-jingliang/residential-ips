@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-10-03 16:33:13 UTC
+生成时间: 2026-10-03 21:21:12 UTC
 ==============================================================================
 
 说明:
@@ -15,29 +15,19 @@
   · 复核建议 : 把 exit_ip 贴进 https://scamalytics.com/ip/<IP> 与
                https://bgp.he.net/ip/<IP> 看 ASN 归属是否真是民用运营商
 
-本轮家宽节点数: 6
+本轮家宽节点数: 2
 
-[1] HK  严格家宽  置信度 82
-     exit_ip : 112.120.221.250
-     server  : ab6440be-tmm5c0-truoje-1uni.hk3.hyhuawei.com:443  (hysteria2)
-     ASN     : AS4760 HKT Limited
-     ISP     : Hong Kong Telecommunications (HKT) Limited Mass Internet
-     ORG     : Hong Kong Telecommunications (HKT) Limited
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Hong Kong Telecommunications (HKT) Limited Mass Internet asn=AS4760 PCCW IMS Limited
-     fraud   : 0  (-1 = 未取到评分)
+[1] US  移动网络  置信度 85
+     exit_ip : 216.36.80.137
+     server  : 104.18.46.234:2086  (vless)
+     ASN     : AS3257 GTT Communications Inc.
+     ISP     : GTT Americas
+     ORG     : -
+     ip-api  : hosting=False proxy=False mobile=True reverse=-
+     ipapi.is: company=Private Customer asn=AS3257 GTT Communications Inc.
+     fraud   : 8  (-1 = 未取到评分)
 
-[2] HK  严格家宽  置信度 82
-     exit_ip : 203.198.86.98
-     server  : 3b4c630e-tmm5c0-tv7zgh-1ijh5.nw4.hyhuawei.com:443  (hysteria2)
-     ASN     : AS4760 HKT Limited
-     ISP     : Hong Kong Telecommunications (HKT) Limited Mass Internet
-     ORG     : Hong Kong Telecommunications (HKT) Limited
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Hong Kong Telecommunications (HKT) Limited Mass Internet asn=AS4760 PCCW IMS Limited
-     fraud   : 0  (-1 = 未取到评分)
-
-[3] TR  移动网络  置信度 85
+[2] TR  移动网络  置信度 85
      exit_ip : 206.1.96.108
      server  : me17.msjia8844.site:7443  (hysteria2)
      ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
@@ -45,34 +35,4 @@
      ORG     : -
      ip-api  : hosting=False proxy=False mobile=True reverse=-
      ipapi.is: company=Netlen Internet Hizmetleri Ltd. Sti. asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
-     fraud   : 0  (-1 = 未取到评分)
-
-[4] SG  严格家宽  置信度 82
-     exit_ip : 202.156.27.133
-     server  : s3.huhiuh.space:18642  (hysteria2)
-     ASN     : AS4657 StarHub Ltd
-     ISP     : StarHub Cable Vision Ltd
-     ORG     : SGCABLEVISION
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=StarHub Cable Vision Ltd asn=AS4657 Starhub Ltd.
-     fraud   : 1  (-1 = 未取到评分)
-
-[5] TW  严格家宽  置信度 82
-     exit_ip : 36.234.137.156
-     server  : sbgfgov.vip24.wogacnmnagfwgov.com:11224  (vmess)
-     ASN     : AS3462 Data Communication Business Group
-     ISP     : Chunghwa Telecom Co., Ltd.
-     ORG     : Chunghwa Telecom Co. Ltd.
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Chunghwa Telecom Data Communication Business Group asn=AS3462 Chunghwa Telecom Co., Ltd.
-     fraud   : 0  (-1 = 未取到评分)
-
-[6] TW  严格家宽  置信度 82
-     exit_ip : 36.234.137.156
-     server  : sbgfgov.vip23.wogacnmnagfwgov.com:11223  (vmess)
-     ASN     : AS3462 Data Communication Business Group
-     ISP     : Chunghwa Telecom Co., Ltd.
-     ORG     : Chunghwa Telecom Co. Ltd.
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Chunghwa Telecom Data Communication Business Group asn=AS3462 Chunghwa Telecom Co., Ltd.
      fraud   : 0  (-1 = 未取到评分)

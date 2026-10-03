@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe",
+      "server": "185.135.86.175",
+      "server_port": 9068,
+      "method": "aes-256-cfb",
+      "password": "mwgRg9hRq3b4Qnwb"
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe",
       "server": "185.28.47.28",
       "server_port": 443,
       "uuid": "8f6e49e6-7f03-4f10-9da9-1716158d80ed",
@@ -25,45 +33,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe",
-      "server": "185.135.86.175",
-      "server_port": 9036,
-      "method": "aes-256-cfb",
-      "password": "hbtvgUz5uNYyB3Rf"
-    },
-    {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe",
-      "server": "185.135.86.175",
-      "server_port": 9034,
-      "method": "aes-256-cfb",
-      "password": "Yg4MbdXFQ9HFFVY6"
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe",
-      "server": "195.123.213.28",
-      "server_port": 443,
-      "uuid": "02fcc1a4-ee90-4970-8bbb-4ffaa8109d24",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo",
-          "short_id": "5c256336e3b673fa"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 05 - xiaohe",
       "server": "138.124.180.137",
       "server_port": 443,
       "uuid": "5234b2b7-5e07-422c-8159-d62a676c00c6",
@@ -73,7 +44,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -84,7 +55,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe",
+      "tag": "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe",
       "server": "104.252.19.114",
       "server_port": 8443,
       "uuid": "40cba749-bca9-4089-9c02-84a357244ce0",
@@ -111,9 +82,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe",
         "🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe",
         "🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 05 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe"
+        "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe"
       ]
     },
     {
@@ -123,9 +92,7 @@
         "🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe",
         "🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe",
         "🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 05 - xiaohe",
-        "🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe"
+        "🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

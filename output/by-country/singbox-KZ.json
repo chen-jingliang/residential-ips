@@ -14,7 +14,7 @@
         "server_name": "yahoo.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -34,7 +34,7 @@
         "type": "ws",
         "path": "/vmess/",
         "headers": {
-          "Host": "google.com"
+          "Host": "viber.com"
         }
       }
     },

@@ -6,13 +6,13 @@
     {
       "type": "trojan",
       "tag": "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-      "server": "loved-shark.rooster465.autos",
+      "server": "3.253.106.233",
       "server_port": 443,
       "password": "UX82473651",
       "tls": {
         "enabled": true,
         "server_name": "loved-shark.rooster465.autos",
-        "insecure": true
+        "insecure": false
       }
     },
     {
@@ -37,15 +37,24 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
-      "server": "3.255.76.207",
-      "server_port": 443,
-      "password": "Trojan@82164024",
+      "server": "198.55.102.59",
+      "server_port": 4443,
+      "uuid": "7f86f371-5a85-48be-babc-7af1ae7ffb75",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ie.tronsg.com",
-        "insecure": true
+        "server_name": "vk.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9gYnZLxZAPxIKzu9e-cOLBpbCn9p9og9gBodOCh5HB8",
+          "short_id": "ce6767c3f1"
+        }
       }
     },
     {

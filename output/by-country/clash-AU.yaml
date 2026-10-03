@@ -18,14 +18,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: firefox
 - name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  server: vpn-au-001.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-au-001.fastervpn.world
-  skip-cert-verify: true
-- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   server: 35.197.168.118
   port: 443
   udp: true
@@ -37,15 +29,15 @@ proxies:
     short-id: 8a7d5e0248cdb1b1
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
-  server: au-1.tr202613.com
+- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
+  server: vpn-au-001.fastervpn.world
   port: 443
   udp: true
-  type: trojan
-  password: 2ni2H9zUKdDCjREL8Z
-  sni: au-1.tr202613.com
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-au-001.fastervpn.world
   skip-cert-verify: true
-- name: 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
+- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   server: 152.67.115.203
   port: 443
   udp: true
@@ -55,7 +47,7 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
-- name: 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
+- name: 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
   server: 137.23.3.238
   port: 20000
   udp: true
@@ -76,7 +68,6 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -87,6 +78,5 @@ proxy-groups:
   - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 05 - xiaohe
-  - 🇦🇺 澳大利亚 (Australia) 06 - xiaohe
 rules:
 - MATCH,PROXIES
