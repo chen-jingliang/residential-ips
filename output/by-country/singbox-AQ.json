@@ -5,23 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-      "server": "149.33.30.176",
-      "server_port": 443,
-      "uuid": "5fffad1b-10f0-41ff-abe7-e5a92696d5ef",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇦🇶 AQ 01 - xiaohe",
+      "server": "2.27.26.132",
+      "server_port": 444,
+      "uuid": "141bbdef-a341-4846-aec7-9d6531ff8790",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "rk_iTiKEWYK02oF8lCIXrVlM7pWMSYX-Iuaz6Eat5lI",
-          "short_id": "4b26322b354bd74e"
+          "public_key": "dEhIR-YkvqguXB5_P3LMuyNYM82lMHQsSGhhtkmvE0k",
+          "short_id": "d7abeb515312dc2f"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "apple.com"
       }
     },
     {
@@ -29,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🇦🇶 AQ 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe"
+        "🇦🇶 AQ 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇱🇺 卢森堡 (Luxembourg) 01 - xiaohe
-  server: lbeiggdz.smart-cats.ru
+  server: 193.57.88.7
   port: 443
   udp: true
   type: vless

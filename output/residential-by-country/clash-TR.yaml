@@ -11,7 +11,7 @@ proxies:
   type: hysteria2
   password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
   sni: me17.msjia8844.site
-  skip-cert-verify: true
+  skip-cert-verify: false
   obfs: salamander
   obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
 proxy-groups:
