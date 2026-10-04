@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-10-04 17:16:46 UTC
+生成时间: 2026-10-04 21:35:32 UTC
 ==============================================================================
 
 说明:
@@ -17,19 +17,19 @@
 
 本轮家宽节点数: 2
 
-[1] RU  严格家宽  置信度 71
-     exit_ip : 194.38.11.86
-     server  : 194.38.11.86:65443  (shadowsocks)
-     ASN     : AS199669 Okay-Telecom Ltd.
-     ISP     : Okay-Telecom Ltd.
-     ORG     : Park-Web LLC
+[1] KR  严格家宽  置信度 82
+     exit_ip : 49.254.204.133
+     server  : 49.254.204.133:1774  (shadowsocks)
+     ASN     : AS4766 Korea Telecom
+     ISP     : Korea Telecom
+     ORG     : Haionnet
      ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Park-Web LLC asn=AS199669 Okay-Telecom Ltd.
+     ipapi.is: company=HAIonNet asn=AS4766 Korea Telecom
      fraud   : 0  (-1 = 未取到评分)
 
 [2] TW  严格家宽  置信度 82
      exit_ip : 60.249.28.58
-     server  : 104.20.36.205:443  (vless)
+     server  : argo6.5671234.xyz:443  (vless)
      ASN     : AS3462 Data Communication Business Group
      ISP     : Chunghwa Telecom Co., Ltd.
      ORG     : Chunghwa Telecom Co. Ltd.

@@ -5,33 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: undef.network
-  port: 2053
+  server: www.nextkyc.com
+  port: 8443
   udp: true
-  type: vless
-  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: uwu.blueknightnet.qzz.io
+  servername: v2ray1.dozapp.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
+    path: /lMnsZUN4/
+    headers: &id001
+      Host: v2ray1.dozapp.xyz
 - name: 🌐 其他地区 (Other) 02 - xiaohe
-  server: undef.network
-  port: 2053
+  server: www.nextkyc.com
+  port: 8443
   udp: true
-  type: vless
-  uuid: e3fb01b6-69b4-41d7-babf-696d992de194
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: uwu.blueknightnet.qzz.io
+  servername: v2ray1.dozapp.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
-    headers:
-      Host: uwu.blueknightnet.qzz.io
+    path: /lMnsZUN4/
+    headers: *id001
 proxy-groups:
 - name: PROXIES
   type: select
