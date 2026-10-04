@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  server: loved-shark.rooster465.autos
+  server: 3.253.106.233
   port: 443
   udp: true
   type: trojan
@@ -13,18 +13,13 @@ proxies:
   sni: loved-shark.rooster465.autos
   skip-cert-verify: true
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: 198.13.142.208
+  server: sacred-anemone.rooster465.autos
   port: 443
   udp: true
-  type: vless
-  uuid: c916acaa-c87e-4c18-b8b6-5b2966cdb52a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JDUHaCWFryv7gFDYFcjcbdZiMJ7ympfTJGB8JXDwEnU
-    short-id: 798467fa
-  servername: 36911.lumariqis.com
-  client-fingerprint: chrome
+  type: trojan
+  password: UX82473651
+  sni: sacred-anemone.rooster465.autos
+  skip-cert-verify: false
 - name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
   server: 3.9.135.156
   port: 51847
@@ -39,12 +34,12 @@ proxies:
   servername: www.tesla.com
   client-fingerprint: chrome
 - name: 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
-  server: sacred-anemone.rooster465.autos
+  server: ie.tronsg.com
   port: 443
   udp: true
   type: trojan
-  password: UX82473651
-  sni: sacred-anemone.rooster465.autos
+  password: Trojan@82164024
+  sni: ie.tronsg.com
   skip-cert-verify: false
 - name: 🇮🇪 爱尔兰 (Ireland) 05 - xiaohe
   server: 198.55.102.59
