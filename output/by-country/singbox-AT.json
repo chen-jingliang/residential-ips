@@ -25,12 +25,21 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇦🇹 奥地利 (Austria) 03 - xiaohe",
+      "server": "apadana.gamingnet.ir",
+      "server_port": 57467,
+      "method": "2022-blake3-aes-256-gcm",
+      "password": "mp6qnmHU66oG5bhOinug4uzkh+1tLLyT5gMHIo5evUA=:wkU3pzc96Bl+VD5TwzaibINc0qLdHFD4wRaQMfK+7Sw="
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
       ]
     },
     {
@@ -38,7 +47,8 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

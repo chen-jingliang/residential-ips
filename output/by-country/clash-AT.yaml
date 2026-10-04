@@ -21,6 +21,13 @@ proxies:
   tls: true
   servername: bigdick.gamegrow.ru
   skip-cert-verify: false
+- name: 🇦🇹 奥地利 (Austria) 03 - xiaohe
+  server: apadana.gamingnet.ir
+  port: 57467
+  udp: true
+  type: ss
+  cipher: 2022-blake3-aes-256-gcm
+  password: mp6qnmHU66oG5bhOinug4uzkh+1tLLyT5gMHIo5evUA=:wkU3pzc96Bl+VD5TwzaibINc0qLdHFD4wRaQMfK+7Sw=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -28,6 +35,7 @@ proxy-groups:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
   - 🇦🇹 奥地利 (Austria) 02 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -35,5 +43,6 @@ proxy-groups:
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
   - 🇦🇹 奥地利 (Austria) 02 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 03 - xiaohe
 rules:
 - MATCH,PROXIES
