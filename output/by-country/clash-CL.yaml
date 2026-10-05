@@ -5,48 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01 - xiaohe
-  server: 64.176.15.134
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 02 - xiaohe
-  server: 64.176.5.68
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform103
-    headers:
-      Host: platform103.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 03 - xiaohe
-  server: 64.176.19.77
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform118
-    headers:
-      Host: platform118.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 04 - xiaohe
-  server: 64.176.21.217
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform115
-- name: 🇨🇱 智利 (Chile) 05 - xiaohe
   server: 64.176.16.32
   port: 80
   udp: true
@@ -55,7 +13,40 @@ proxies:
   network: ws
   ws-opts:
     path: /platform113
-- name: 🇨🇱 智利 (Chile) 06 - xiaohe
+    headers:
+      Host: platform113.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 02 - xiaohe
+  server: 64.176.7.121
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 03 - xiaohe
+  server: 64.176.21.217
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform115
+    headers:
+      Host: platform115.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 04 - xiaohe
+  server: 64.176.22.185
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform107
+- name: 🇨🇱 智利 (Chile) 05 - xiaohe
   server: 64.176.2.25
   port: 80
   udp: true
@@ -66,7 +57,7 @@ proxies:
     path: /platform109
     headers:
       Host: platform109.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 07 - xiaohe
+- name: 🇨🇱 智利 (Chile) 06 - xiaohe
   server: 64.176.10.89
   port: 80
   udp: true
@@ -75,8 +66,10 @@ proxies:
   network: ws
   ws-opts:
     path: /platform102
-- name: 🇨🇱 智利 (Chile) 08 - xiaohe
-  server: 64.176.24.232
+    headers:
+      Host: platform102.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 07 - xiaohe
+  server: platform108.golnamakcert.top
   port: 80
   udp: true
   type: vless
@@ -84,25 +77,29 @@ proxies:
   network: ws
   ws-opts:
     path: /platform108
+    headers:
+      Host: platform108.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 08 - xiaohe
+  server: 64.176.19.77
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform118
 - name: 🇨🇱 智利 (Chile) 09 - xiaohe
-  server: 64.176.22.185
+  server: 64.176.15.134
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform107
+    path: /platform101
+    headers:
+      Host: platform101.halalkhor.info
 - name: 🇨🇱 智利 (Chile) 10 - xiaohe
-  server: 64.176.7.121
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform117
-- name: 🇨🇱 智利 (Chile) 11 - xiaohe
   server: 64.176.25.168
   port: 80
   udp: true
@@ -111,8 +108,31 @@ proxies:
   network: ws
   ws-opts:
     path: /platform106
+- name: 🇨🇱 智利 (Chile) 11 - xiaohe
+  server: platform103.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform103
     headers:
-      Host: platform106.halalkhor.info
+      Host: platform103.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 12 - xiaohe
+  server: 64.176.2.21
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: xBStBEVqvGwHPocc
+- name: 🇨🇱 智利 (Chile) 13 - xiaohe
+  server: 64.176.2.21
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: xBStBEVqvGwHPocc
 proxy-groups:
 - name: PROXIES
   type: select
@@ -129,6 +149,8 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 09 - xiaohe
   - 🇨🇱 智利 (Chile) 10 - xiaohe
   - 🇨🇱 智利 (Chile) 11 - xiaohe
+  - 🇨🇱 智利 (Chile) 12 - xiaohe
+  - 🇨🇱 智利 (Chile) 13 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -145,5 +167,7 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 09 - xiaohe
   - 🇨🇱 智利 (Chile) 10 - xiaohe
   - 🇨🇱 智利 (Chile) 11 - xiaohe
+  - 🇨🇱 智利 (Chile) 12 - xiaohe
+  - 🇨🇱 智利 (Chile) 13 - xiaohe
 rules:
 - MATCH,PROXIES
