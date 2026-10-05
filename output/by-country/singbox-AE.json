@@ -4,32 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
-      "server": "122.8.45.4",
-      "server_port": 8443,
-      "uuid": "2d24e797-ec6c-0808-dd31-9cd22b5dfdc7",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.nvidia.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "WtLZK1KyhSpI3K-R4M3sLAHWPOgGPMgkL6RneL0OfCY",
-          "short_id": ""
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "TunService"
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
+      "tag": "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
       "server": "130.49.161.70",
       "server_port": 443,
       "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
@@ -44,21 +20,9 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
-      "server": "217.60.33.215",
-      "server_port": 443,
-      "password": "865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01",
-      "tls": {
-        "enabled": true,
-        "server_name": "streambox.wwwinternetvideo.click",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 04 - xiaohe",
-      "server": "uae.unixzone.us",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
+      "server": "84.235.244.108",
       "server_port": 22573,
       "uuid": "39947382-3212-41c9-bc3a-589574ac8b23",
       "transport": {
@@ -71,7 +35,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 05 - xiaohe",
+      "tag": "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
       "server": "146.70.102.82",
       "server_port": 443,
       "uuid": "31fd2fde-ca69-450e-8c03-eaad819b06b9",
@@ -81,33 +45,12 @@
         "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
           "public_key": "GDer6NQYXdbccrFI0tLn2671PjCvrcSy0R7TKY8vG1k",
           "short_id": "002fb4ec7b3088cc"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 06 - xiaohe",
-      "server": "app-ss-115.spbstudentlife.com",
-      "server_port": 443,
-      "uuid": "f0961eb0-aed4-4bcb-8271-9ee7abce71d8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "assets-ss-115.spbstudentlife.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Ib2ZSV5JyR3iIdOmaAgS_KxcXXG0VV3wjRf44nl0bRY",
-          "short_id": "1d6a72a34d14d28e"
         }
       }
     },
@@ -118,10 +61,7 @@
         "auto",
         "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
         "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 04 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 05 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 06 - xiaohe"
+        "🇦🇪 阿联酋 (UAE) 03 - xiaohe"
       ]
     },
     {
@@ -130,10 +70,7 @@
       "outbounds": [
         "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
         "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 04 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 05 - xiaohe",
-        "🇦🇪 阿联酋 (UAE) 06 - xiaohe"
+        "🇦🇪 阿联酋 (UAE) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

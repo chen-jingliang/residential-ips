@@ -5,31 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: ade.axiomed.ir
+  server: 172.67.158.34
   port: 443
   udp: true
   type: vless
-  uuid: 77702cd2-6a11-40f4-a817-1efeae6f6889
+  uuid: 07821f66-cdb7-4c70-9de6-e230cffac470
   tls: true
-  servername: t4sy714oeyu0ntwavv62g6ua9o.ade-1001.workers.dev
+  servername: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl/Li1khIHH3DNItJyzraemsPBQvu
+    headers:
+      Host: wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+  server: 5.9.117.252
+  port: 4433
+  udp: true
+  type: vless
+  uuid: ef286b0e-21ed-4e2b-9110-e2ddc7627892
+  tls: true
+  servername: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /vl/Nmf5YfPITFhUjeHE8KfDU5T8H?ed=2560
+    path: /@Marisa_kristi
     headers:
-      Host: t4sy714oeyu0ntwavv62g6ua9o.ade-1001.workers.dev
+      Host: 9-7u3b6e.wzkija0v0du4yhk6jfyfafml3nh22kne.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
 rules:
 - MATCH,PROXIES
