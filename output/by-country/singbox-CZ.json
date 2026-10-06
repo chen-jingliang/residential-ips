@@ -15,7 +15,7 @@
         "server_name": "media2.h2corp.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,

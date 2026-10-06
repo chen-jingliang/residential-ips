@@ -16,7 +16,7 @@ proxies:
     public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
     short-id: 5efa80b939612291
   servername: d3-se1.cloud-cdn.xyz
-  client-fingerprint: chrome
+  client-fingerprint: ios
 - name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   server: 132.243.231.4
   port: 443
@@ -29,33 +29,8 @@ proxies:
     public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
     short-id: 5efa80b939612291
   servername: d3-se1.cloud-cdn.xyz
-  client-fingerprint: edge
-- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
-  server: 77.110.96.201
-  port: 36264
-  udp: true
-  type: hysteria2
-  password: Telegram-vpnjey
-  sni: se.vpnjey2.dpdns.org
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: Telegram@vpnjey
-- name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  server: sub.merky.top
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
-  tls: true
-  servername: sub.merky.top
-  skip-cert-verify: false
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /merky-connect/de6/
-    headers:
-      Host: sub.merky.top
-- name: 🇸🇪 瑞典 (Sweden) 05 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -66,18 +41,22 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  server: 193.233.217.17
-  port: 5443
+- name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
+  server: 94.143.231.146
+  port: 443
   udp: true
-  type: hysteria2
-  password: QFO6ZOwTxjvD8ITXouHLh_Rrp-QC3rXnZRTnShz_GcJPRsPXQ4QV456o1TN6ISbN
-  sni: hy2.70.34.209.12.nip.io
+  type: vless
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
+  tls: true
+  servername: sub.merky.top
   skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /merky-connect/de6/
 proxy-groups:
 - name: PROXIES
   type: select
@@ -87,8 +66,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 05 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -98,7 +75,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 03 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 05 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 06 - xiaohe
 rules:
 - MATCH,PROXIES
