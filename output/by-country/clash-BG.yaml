@@ -6,33 +6,12 @@ log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
   server: 213.183.63.60
-  port: 9064
+  port: 9030
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: cp8pRSUAyLhTfVWH
+  password: GeregetR8cvQHzYr
 - name: 🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe
-  server: 213.183.63.60
-  port: 9061
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 4R3hUfZ2FHhDmNcP
-- name: 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
-  server: 213.183.63.60
-  port: 9066
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 2KUaE2a8NWTvuCZ3
-- name: 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
-  server: 213.183.63.60
-  port: 9029
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: dU3DSNS8wYPXzEKw
-- name: 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
   server: 193.148.59.178
   port: 443
   udp: true
@@ -45,7 +24,7 @@ proxies:
     short-id: e3daad69
   servername: www.apple.com
   client-fingerprint: random
-- name: 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
+- name: 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
   server: 136.175.82.85
   port: 18775
   udp: true
@@ -66,9 +45,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -77,8 +53,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
 rules:
 - MATCH,PROXIES
