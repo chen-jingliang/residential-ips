@@ -12,7 +12,10 @@
       "security": "auto",
       "transport": {
         "type": "ws",
-        "path": "/vmess/"
+        "path": "/vmess/",
+        "headers": {
+          "Host": "wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc"
+        }
       }
     },
     {
