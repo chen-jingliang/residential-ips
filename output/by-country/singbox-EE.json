@@ -6,6 +6,26 @@
     {
       "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe",
+      "server": "132.243.65.86",
+      "server_port": 443,
+      "uuid": "73705990-99fd-4deb-98b4-91ca7bf9bbc0",
+      "tls": {
+        "enabled": true,
+        "server_name": "ee2x.global-cdn.org",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "content.v1.Feed"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe",
       "server": "95.85.242.160",
       "server_port": 443,
       "uuid": "2b781b4a-5942-48e0-a7f3-5a07b7b488c1",
@@ -26,54 +46,28 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe",
-      "server": "95.85.242.166",
-      "server_port": 443,
-      "uuid": "2b781b4a-5942-0018-a7f3-5a07b7b488c1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ee-root.sworkingvpn.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI",
-          "short_id": "15bcc0a77c3cacdf"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe",
-      "server": "132.243.65.86",
+      "server": "94.183.170.135",
       "server_port": 443,
-      "uuid": "73705990-99fd-4deb-98b4-91ca7bf9bbc0",
-      "tls": {
-        "enabled": true,
-        "server_name": "ee2x.global-cdn.org",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
+      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
       "transport": {
-        "type": "grpc",
-        "service_name": "content.v1.Feed"
+        "type": "ws"
       }
     },
     {
       "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe",
       "server": "94.183.170.135",
-      "server_port": 443,
+      "server_port": 8443,
       "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
-      "transport": {
-        "type": "ws",
-        "path": "/"
+      "tls": {
+        "enabled": true,
+        "server_name": "estproxy4.lockdwn.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -100,16 +94,21 @@
     {
       "type": "vless",
       "tag": "🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe",
-      "server": "94.183.170.135",
-      "server_port": 8443,
-      "uuid": "06c4e938-2954-478f-a870-ca1b163e30e9",
+      "server": "95.85.242.166",
+      "server_port": 443,
+      "uuid": "2b781b4a-5942-0018-a7f3-5a07b7b488c1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "estproxy4.lockdwn.com",
-        "insecure": false,
+        "server_name": "ee-root.sworkingvpn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AhLy7ha7FF2EQfu-3SxOFKUwExyHActYPHtyv82KNCI",
+          "short_id": "15bcc0a77c3cacdf"
         }
       }
     },
@@ -125,7 +124,7 @@
         "server_name": "ibm.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -146,7 +145,11 @@
         "insecure": false,
         "alpn": [
           "http/1.1"
-        ]
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "ws",

@@ -5,62 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  server: 188.114.97.1
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0b3e7958-e5c4-498f-ab21-b49686f95d2d
-  tls: true
-  servername: bold-term-4edd.mbigspot.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: bold-term-4edd.mbigspot.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  server: muddy-math-c1fc.tmpnriqueau89.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
-  tls: true
-  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  server: 45.128.78.84
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3f58af8e-7c91-424e-85c7-ec6913b7fc8f
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: sellflow.org
-  client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  server: 194.87.196.13
+  server: 176.32.39.52
   port: 20880
   udp: true
   type: ss
   cipher: aes-256-gcm
-  password: 4938e975724d0ed1
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  server: 130.49.189.158
-  port: 43558
+  password: 8ad9d72a5571df86
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: srv-17e124.21freedom.net
+  port: 11592
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: EKGHx2yhUzmnRONhNOxvn+BqUr10wfqDQqRg4DYUJE8=
-- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  type: hysteria2
+  password: 41edb44c8e
+  sni: srv-17e124.21freedom.net
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   server: 81.177.215.175
   port: 443
   udp: true
@@ -72,16 +31,16 @@ proxies:
     public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
     short-id: 9e4eced6e98ed4d4
   servername: github.com
-  client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
-  server: srv-17e124.21freedom.net
-  port: 11592
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  server: 138.124.254.233
+  port: 443
   udp: true
   type: hysteria2
-  password: 41edb44c8e
-  sni: srv-17e124.21freedom.net
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
+  password: cc4074d6-f450-4025-833a-a6e0100ceaff
+  sni: crt.molniya.sbs
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -93,19 +52,26 @@ proxies:
     short-id: 23103e1e
   servername: ya.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
-  server: du-rov.secureservice.top
-  port: 8443
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: EKGHx2yhUzmnRONhNOxvn+BqUr10wfqDQqRg4DYUJE8=
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  server: xsru1.ddnsfree.com
+  port: 443
   udp: true
   type: vless
-  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
-  flow: xtls-rprx-vision
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
   tls: true
-  reality-opts:
-    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
-    short-id: 3cbc3d737fb9c4af
-  servername: du-rov.secureservice.top
-  client-fingerprint: chrome
+  servername: xsru1.ddnsfree.com
+  skip-cert-verify: false
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-ru
 proxy-groups:
 - name: PROXIES
   type: select
@@ -118,8 +84,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -132,7 +96,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
 rules:
 - MATCH,PROXIES

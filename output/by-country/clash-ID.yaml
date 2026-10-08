@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  server: zfd-boardv2.kunlun01dns.com
+  port: 16298
+  udp: true
+  type: vmess
+  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
+  alterId: 0
+  cipher: auto
+- name: 🇮🇩 印尼 (Indonesia) 02 - xiaohe
   server: 103.172.197.3
   port: 16006
   udp: true
@@ -15,15 +23,7 @@ proxies:
   reality-opts:
     public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
   servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: 🇮🇩 印尼 (Indonesia) 02 - xiaohe
-  server: zfd-boardv2.kunlun01dns.com
-  port: 16298
-  udp: true
-  type: vmess
-  uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-  alterId: 0
-  cipher: auto
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
