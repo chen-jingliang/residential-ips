@@ -5,6 +5,36 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  server: 188.114.97.1
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 0b3e7958-e5c4-498f-ab21-b49686f95d2d
+  tls: true
+  servername: bold-term-4edd.mbigspot.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: bold-term-4edd.mbigspot.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  port: 443
+  udp: true
+  type: vless
+  uuid: 532a9115-aee7-4d39-9638-1e5146de075b
+  tls: true
+  servername: muddy-math-c1fc.tmpnriqueau89.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: muddy-math-c1fc.tmpnriqueau89.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   server: 45.128.78.84
   port: 443
   udp: true
@@ -16,27 +46,13 @@ proxies:
     public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
   servername: sellflow.org
   client-fingerprint: firefox
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  server: 176.32.39.52
-  port: 20880
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   server: 194.87.196.13
   port: 20880
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: 4938e975724d0ed1
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  server: 194.38.11.86
-  port: 65443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
 - name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   server: 130.49.189.158
   port: 43558
@@ -45,14 +61,6 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: EKGHx2yhUzmnRONhNOxvn+BqUr10wfqDQqRg4DYUJE8=
 - name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  server: 103.88.243.142
-  port: 11592
-  udp: true
-  type: hysteria2
-  password: 41edb44c8e
-  sni: srv-17e124.21freedom.net
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   server: 81.177.215.175
   port: 443
   udp: true
@@ -64,8 +72,28 @@ proxies:
     public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
     short-id: 9e4eced6e98ed4d4
   servername: github.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  server: srv-17e124.21freedom.net
+  port: 11592
+  udp: true
+  type: hysteria2
+  password: 41edb44c8e
+  sni: srv-17e124.21freedom.net
+  skip-cert-verify: true
 - name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
+  server: 45.12.75.242
+  port: 26424
+  udp: true
+  type: vless
+  uuid: 633f424e-2b11-48da-a6b3-a849dd71456f
+  tls: true
+  reality-opts:
+    public-key: l8AubqcxQO-HRFJy4pZL1vbLOo-eXit69s-XulSELE0
+    short-id: 23103e1e
+  servername: ya.ru
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
   server: du-rov.secureservice.top
   port: 8443
   udp: true
@@ -77,51 +105,7 @@ proxies:
     public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
     short-id: 3cbc3d737fb9c4af
   servername: du-rov.secureservice.top
-  client-fingerprint: random
-- name: 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
-  server: 46.17.41.166
-  port: 20880
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: 895b4b796a357570
-- name: 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
-  server: ru.xiaoliyu.cyou
-  port: 18333
-  udp: true
-  type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: ru.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
-  server: 37.139.42.221
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3a8b464f-3701-40ed-b6b6-b612019e34c1
-  tls: true
-  servername: apis.stroymatdv.cc
-  skip-cert-verify: false
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /amsws
-    headers: &id001
-      Host: apis.stroymatdv.cc
-- name: 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
-  server: 37.139.42.221
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3a8b464f-3701-40ed-b6b6-b612019e34c1
-  tls: true
-  servername: apis.stroymatdv.cc
-  skip-cert-verify: false
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /amsws
-    headers: *id001
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -136,9 +120,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -153,8 +134,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
 rules:
 - MATCH,PROXIES
