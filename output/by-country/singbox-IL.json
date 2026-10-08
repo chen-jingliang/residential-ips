@@ -15,7 +15,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -27,7 +27,17 @@
     {
       "type": "vless",
       "tag": "🇮🇱 以色列 (Israel) 02 - xiaohe",
-      "server": "es.srv.dvzh.net",
+      "server": "31.57.185.253",
+      "server_port": 54602,
+      "uuid": "cd373981-6114-4408-9c8d-7b39d31c3a73",
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇱 以色列 (Israel) 03 - xiaohe",
+      "server": "103.240.146.87",
       "server_port": 443,
       "uuid": "91344c03-b37f-42c5-90f1-cbb95c5cf256",
       "flow": "xtls-rprx-vision",
@@ -36,7 +46,7 @@
         "server_name": "es.srv.dvzh.net",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -51,7 +61,8 @@
       "outbounds": [
         "auto",
         "🇮🇱 以色列 (Israel) 01 - xiaohe",
-        "🇮🇱 以色列 (Israel) 02 - xiaohe"
+        "🇮🇱 以色列 (Israel) 02 - xiaohe",
+        "🇮🇱 以色列 (Israel) 03 - xiaohe"
       ]
     },
     {
@@ -59,7 +70,8 @@
       "tag": "auto",
       "outbounds": [
         "🇮🇱 以色列 (Israel) 01 - xiaohe",
-        "🇮🇱 以色列 (Israel) 02 - xiaohe"
+        "🇮🇱 以色列 (Israel) 02 - xiaohe",
+        "🇮🇱 以色列 (Israel) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
