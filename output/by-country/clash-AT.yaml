@@ -12,13 +12,20 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇦🇹 奥地利 (Austria) 02 - xiaohe
-  server: 5.254.51.109
-  port: 9443
+  server: 188.114.97.6
+  port: 443
   udp: true
-  type: hysteria2
-  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
-  sni: keyhop-voxility-at.dynuddns.com
+  type: vless
+  uuid: 698b212d-ca12-4794-8256-252a6e1b4533
+  tls: true
+  servername: w2p6.vpnpolar.online
   skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /beeline
+    headers:
+      Host: w2p6.vpnpolar.online
 proxy-groups:
 - name: PROXIES
   type: select

@@ -5,18 +5,25 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe",
-      "server": "89.125.96.92",
-      "server_port": 2053,
-      "uuid": "6c713691-3ca2-0008-ad25-113d1bed6b03",
+      "tag": "🇮🇸 冰岛 (Iceland) 01 - xiaohe",
+      "server": "195.246.230.125",
+      "server_port": 443,
+      "uuid": "489f1717-d3c7-4940-ad68-bdbdbab857f4",
       "tls": {
         "enabled": true,
-        "server_name": "wss.zazazuza.ru",
-        "insecure": false
+        "server_name": "x.m-90.xyz",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/vpn-wss/fluxor/59011/"
+        "path": "t.me/TEAMNETGRATISCOL",
+        "headers": {
+          "Host": "x.m-90.xyz"
+        }
       }
     },
     {
@@ -24,14 +31,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe"
+        "🇮🇸 冰岛 (Iceland) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe"
+        "🇮🇸 冰岛 (Iceland) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
