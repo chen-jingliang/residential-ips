@@ -13,7 +13,7 @@ proxies:
   sni: cz.h2.cleanersaz.help
   skip-cert-verify: true
 - name: 🇨🇿 捷克 (Czech) 02 - xiaohe
-  server: ger6.fytpn.com
+  server: 194.87.6.192
   port: 56789
   udp: true
   type: vless
@@ -24,9 +24,9 @@ proxies:
     public-key: PDHRi_RRFsPhxLoH2C1l9A9HdL2y7g1uOzXmY0XnmzQ
     short-id: a2aa
   servername: ger6.fytpn.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇨🇿 捷克 (Czech) 03 - xiaohe
-  server: 194.87.6.192
+  server: ger6.fytpn.com
   port: 2097
   udp: true
   type: trojan

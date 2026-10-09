@@ -18,7 +18,7 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 02 - xiaohe",
-      "server": "ger6.fytpn.com",
+      "server": "194.87.6.192",
       "server_port": 56789,
       "uuid": "a889fba5-5472-4022-a6b4-9710157fda2f",
       "flow": "xtls-rprx-vision",
@@ -27,7 +27,7 @@
         "server_name": "ger6.fytpn.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -39,17 +39,13 @@
     {
       "type": "trojan",
       "tag": "🇨🇿 捷克 (Czech) 03 - xiaohe",
-      "server": "194.87.6.192",
+      "server": "ger6.fytpn.com",
       "server_port": 2097,
       "password": "gHncxmRjWEJ7apX5XuXsHw4kGexMH_gU",
       "tls": {
         "enabled": true,
         "server_name": "ger6.fytpn.com",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "insecure": false
       }
     },
     {
