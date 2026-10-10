@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe
-  server: 89.125.96.81
+  server: 89.125.96.89
   port: 2053
   udp: true
   type: vless
@@ -16,17 +16,36 @@ proxies:
   network: ws
   ws-opts:
     path: /vpn-wss/fluxor/59011/
+    headers:
+      Host: wss.zazazuza.ru
+- name: 🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe
+  server: 194.26.229.39
+  port: 443
+  udp: true
+  type: vless
+  uuid: d1004cfe-c279-e865-d865-71964dbdf85d
+  tls: true
+  servername: ost.tmk-videos.online
+  skip-cert-verify: false
+  client-fingerprint: edge
+  network: ws
+  ws-opts:
+    path: /hls/live/broadcast/e75ebceb
+    headers:
+      Host: ost.tmk-videos.online
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe
+  - 🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇾 白俄罗斯 (Belarus) 01 - xiaohe
+  - 🇧🇾 白俄罗斯 (Belarus) 02 - xiaohe
 rules:
 - MATCH,PROXIES

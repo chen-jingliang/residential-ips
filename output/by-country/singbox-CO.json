@@ -5,21 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
-      "server": "61.230.162.88",
-      "server_port": 24215,
-      "uuid": "19d5a678-8396-4e3b-93da-ece618d0e83a",
+      "tag": "🇨🇴 哥伦比亚 (Colombia) 01 - xiaohe",
+      "server": "45.13.186.240",
+      "server_port": 443,
+      "uuid": "e937b92c-701f-420e-a621-3eb3b75de467",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "addons.mozilla.org",
+        "server_name": "time.puffixhosting.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE",
-          "short_id": ""
+          "public_key": "NZO6V4j_bb35I-3ioL-dcbUYU07Ch3kjqV2zRgAslHs",
+          "short_id": "c6437386a343e91e"
         }
       }
     },
@@ -28,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🇨🇴 哥伦比亚 (Colombia) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🇨🇴 哥伦比亚 (Colombia) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
