@@ -17,6 +17,17 @@ proxies:
   servername: yahoo.com
   client-fingerprint: chrome
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
+  server: 3h-kazakhstan1.09vpn.com
+  port: 80
+  udp: true
+  type: vmess
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /vmess/
+- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - xiaohe
   server: 178.236.16.98
   port: 35728
   udp: true
@@ -27,19 +38,7 @@ proxies:
     public-key: vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng
     short-id: 69a2
   servername: yahoo.com
-  client-fingerprint: chrome
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - xiaohe
-  server: 83.222.23.81
-  port: 38065
-  udp: true
-  type: vless
-  uuid: 4b9063e0-3288-44e9-9aac-80fbfce323a0
-  tls: true
-  reality-opts:
-    public-key: dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo
-    short-id: fa
-  servername: yahoo.com
-  client-fingerprint: edge
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select

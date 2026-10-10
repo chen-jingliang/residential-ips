@@ -13,7 +13,14 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇹🇭 泰国 (Thailand) 02 - xiaohe
-  server: 103.86.49.57
+  server: 103.107.52.106
+  port: 52351
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: sxajCTwrlK0zl+zmHpX0p0jXIfatnzlLzWlSQ950L1c=
+- name: 🇹🇭 泰国 (Thailand) 03 - xiaohe
+  server: support.zoom.us.v2ray.simspeedup.com
   port: 80
   udp: true
   type: vless
@@ -22,8 +29,8 @@ proxies:
   ws-opts:
     path: /ws
     headers:
-      Host: aIs.SpEeDtEsT.nEt
-- name: 🇹🇭 泰国 (Thailand) 03 - xiaohe
+      Host: support.zoom.us.v2ray.simspeedup.com
+- name: 🇹🇭 泰国 (Thailand) 04 - xiaohe
   server: 154.21.203.106
   port: 21033
   udp: true
@@ -36,8 +43,8 @@ proxies:
     short-id: cbd39bea0805e2
   servername: www.kaidee.com
   client-fingerprint: firefox
-- name: 🇹🇭 泰国 (Thailand) 04 - xiaohe
-  server: 104.16.10.9
+- name: 🇹🇭 泰国 (Thailand) 05 - xiaohe
+  server: 104.16.10.185
   port: 443
   udp: true
   type: vless
@@ -50,6 +57,14 @@ proxies:
     path: /ws
     headers:
       Host: v2ray.simspeedup.com
+- name: 🇹🇭 泰国 (Thailand) 06 - xiaohe
+  server: silversbgfgov.vip43.wogbcnmnagfwgov.com
+  port: 11243
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -59,6 +74,8 @@ proxy-groups:
   - 🇹🇭 泰国 (Thailand) 02 - xiaohe
   - 🇹🇭 泰国 (Thailand) 03 - xiaohe
   - 🇹🇭 泰国 (Thailand) 04 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 05 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -68,5 +85,7 @@ proxy-groups:
   - 🇹🇭 泰国 (Thailand) 02 - xiaohe
   - 🇹🇭 泰国 (Thailand) 03 - xiaohe
   - 🇹🇭 泰国 (Thailand) 04 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 05 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 06 - xiaohe
 rules:
 - MATCH,PROXIES
