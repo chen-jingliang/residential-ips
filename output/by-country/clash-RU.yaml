@@ -5,33 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  server: 147.45.60.160
-  port: 8444
+  server: 89.125.103.208
+  port: 20111
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 994ccabf6f0950d6
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: 91.196.32.163
+  port: 443
+  udp: true
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: 91.196.32.163
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  server: edge.cloudtechone.org
+  port: 443
   udp: true
   type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  uuid: 5036de9b-1a18-40e2-97f6-9cbb4a4753e4
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
+    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
+    short-id: f93c9d5127e622e4
+  servername: edge.cloudtechone.org
   client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  server: 130.49.189.158
-  port: 43558
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: eicdhshSrFLCx/sZ1PSpuKyoVWGZpU95tFS4iGC1c04=
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  server: 194.38.11.86
-  port: 65443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
 - name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   server: 193.233.74.6
   port: 8444
@@ -48,37 +48,65 @@ proxies:
   grpc-opts:
     grpc-service-name: GunService
 - name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  server: 94.198.54.132
-  port: 443
-  udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  server: 153.80.241.206
-  port: 8444
-  udp: true
-  type: vless
-  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
-  tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: github.com
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   server: 139.28.168.126
   port: 8080
   udp: true
   type: hysteria2
   password: we_9m92rJZ93_m9Cj3KXB_mC9AS7Nx
   sni: hopp-honkong-new.roxa.org
-  skip-cert-verify: true
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  server: 5.42.99.64
+  port: 8443
+  udp: true
+  type: vless
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: 3cbc3d737fb9c4af
+  servername: du-rov.secureservice.top
+  client-fingerprint: chrome
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
+  server: 5.42.99.64
+  port: 8443
+  udp: true
+  type: vless
+  uuid: c53ea5e9-ed8b-4990-805d-7f1d6451426c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fSVfR9NB-6J6smrZlavi0GWd8JfDh0aXuEkKbtuFzUI
+    short-id: 3cbc3d737fb9c4af
+  servername: du-rov.secureservice.top
+  client-fingerprint: chrome
 - name: 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
-  server: ru-1-2.unturned-rust-dead.lol
+  server: ru-1-1.unturned-rust-dead.lol
+  port: 443
+  udp: true
+  type: vless
+  uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8
+  tls: true
+  reality-opts:
+    public-key: gS0qvWKumWcOVoAgf8SHt6Sm3tqpBw07c5sA_Clb1hg
+  servername: ru-1-1.unturned-rust-dead.lol
+  client-fingerprint: random
+- name: 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
+  server: 90.156.218.163
+  port: 443
+  udp: true
+  type: vless
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  servername: eh.vk.ru
+  client-fingerprint: firefox
+- name: 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
+  server: 93.188.184.150
   port: 443
   udp: true
   type: vless
@@ -87,25 +115,29 @@ proxies:
   reality-opts:
     public-key: aYz4_13W8gtAXGBrWeqJXtExahAJ9kUPDapqeyAlYCk
   servername: ru-1-2.unturned-rust-dead.lol
-  client-fingerprint: safari
+  client-fingerprint: random
   network: grpc
   grpc-opts:
     grpc-service-name: ru-api
-- name: 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
-  server: 185.229.9.176
-  port: 46018
+- name: 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
+  server: 94.198.54.132
+  port: 443
+  udp: true
+  type: hysteria2
+  password: f317b5d6-d399-4d3d-a051-89d674ae953c
+  sni: msk.frkn.org
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
+  server: 185.147.27.183
+  port: 8443
   udp: true
   type: vless
-  uuid: a5893c8b-28a2-4947-9a1c-708db25506c3
+  uuid: 379998c5-2a71-4202-9c74-522e0c3c5404
+  flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: een4U3X5mnY1gH2swiakXS9BJ8P4omf8Qp_s8sTp_3Y
-    short-id: 68ae5e7c11f80af5
-  servername: ligastavok.ru
+  servername: user-6a917f32.noooo.win
+  skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -120,6 +152,9 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -134,5 +169,8 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 08 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 09 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 10 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 11 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 12 - xiaohe
 rules:
 - MATCH,PROXIES
