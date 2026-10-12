@@ -18,17 +18,15 @@ proxies:
   servername: sw.golangwikito.cfd
   client-fingerprint: random
 - name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  server: 2.26.55.163
-  port: 443
+  server: 77.110.96.201
+  port: 36264
   udp: true
-  type: vless
-  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
-  servername: specific3.kandnet.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: Telegram-vpnjey
+  sni: se.vpnjey2.dpdns.org
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
 - name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
   server: 62.60.159.81
   port: 2053
@@ -40,48 +38,25 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  server: 31.77.158.128
+  server: 5.129.206.155
   port: 443
   udp: true
   type: vless
-  uuid: b1936288-a353-4ff1-89b3-edaead599c6b
+  uuid: c9c219dc-50da-4135-8e5b-67020291f0ec
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: oB_G3RLFa4E9XSUJzrfe3imPxG0eI32rl42xaB8ME3c
-    short-id: b63566f069feb01d
-  servername: www.lovelive-anime.jp
-  client-fingerprint: random
+    public-key: esjSMExL6v40ksVJD5urvmQD4XZVWfBOCvStdk-q4DE
+    short-id: 6ba85179e30d4fc2
+  servername: p92e5mc7t.zenaltra-hub95.cyou
+  client-fingerprint: chrome
 - name: 🇸🇪 瑞典 (Sweden) 05 - xiaohe
-  server: 77.110.96.201
-  port: 36264
-  udp: true
-  type: hysteria2
-  password: Telegram-vpnjey
-  sni: se.vpnjey2.dpdns.org
-  skip-cert-verify: true
-  obfs: salamander
-  obfs-password: Telegram@vpnjey
-- name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  server: swe.wizard.select
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3db6eb7e-c548-11f1-9902-a337233c6cda
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Sikc1gu5t_uwitf1xTTChP9tpT_sjY530p2tioHbmz0
-    short-id: 3b20e438da99
-  servername: swe.wizard.select
-  client-fingerprint: qq
-- name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
-  server: se3.h1cloud.net
+  server: 136.148.223.212
   port: 25119
   udp: true
   type: vless
@@ -93,6 +68,33 @@ proxies:
     short-id: 10f517
   servername: www.samsung.com
   client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
+  server: sub.merky.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
+  tls: true
+  servername: sub.merky.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /merky-connect/de6/
+    headers:
+      Host: sub.merky.top
+- name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
+  server: 2.26.55.163
+  port: 443
+  udp: true
+  type: vless
+  uuid: 621bcb9e-7df5-427b-a9d4-6e87223c8bca
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 0eWdILjmoRVSJFDMiQskgkKG2Fc4TEMZ3XEPJ8ez9Hw
+  servername: specific3.kandnet.com
+  client-fingerprint: random
 - name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
   server: sweedenqfds777.qcloud.surf
   port: 21223
@@ -100,7 +102,7 @@ proxies:
   type: hysteria2
   password: 8bd04756-3beb-4348-82c9-d35453df50ce
   sni: sweedenqfds777.qcloud.surf
-  skip-cert-verify: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
