@@ -5,106 +5,69 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - xiaohe
-  server: 104.21.70.21
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 893096ae-ed76-4440-bc34-f77c4872540f
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoieE1zSFhYR2hkcHZGUHI3cSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: masterserver1-vsh.kalleh.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
-  server: 104.26.0.1
-  port: 2053
-  udp: true
-  type: vless
-  uuid: dce8ca0a-ed26-45c9-9962-38888c19a0ad
-  tls: true
-  servername: still-scene-fda3.devtahair.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiSDNSSGYxT05LU2VEbyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjYyLjYwLjIxNy4yMzAiXX0=
-    headers:
-      Host: still-scene-fda3.devtahair.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
-  server: 172.67.199.161
-  port: 443
-  udp: true
-  type: trojan
-  password: O5+31W&l1TnaLNaEfqur
-  sni: u3DANGs7bGo2yRJz4uhXMt3-M.e5Iq1Vr7gI52Ww7-83T0H6FUXI1D.WOrKerS.deV
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/wITkfX2lvDk9IF41MvgctE8e7KWPbYpS?ed=2560
-- name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
-  server: 188.114.96.9
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
-  tls: true
-  servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
-    headers:
-      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
-- name: 🇬🇧 英国 (United Kingdom) 05 - xiaohe
   server: 149.102.132.184
   port: 80
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: g5h5jleTRSyO3Rk4
-- name: 🇬🇧 英国 (United Kingdom) 06 - xiaohe
-  server: 35.177.67.165
+- name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
+  server: 16.60.8.87
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 07 - xiaohe
-  server: 13.40.25.145
+- name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
+  server: 13.40.42.59
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 08 - xiaohe
-  server: 149.102.132.184
-  port: 443
+- name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
+  server: 146.70.61.37
+  port: 8080
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: g5h5jleTRSyO3Rk4
-- name: 🇬🇧 英国 (United Kingdom) 09 - xiaohe
-  server: 13.135.199.253
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 10 - xiaohe
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 05 - xiaohe
   server: 141.98.101.181
   port: 443
   udp: true
   type: ss
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇬🇧 英国 (United Kingdom) 11 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 06 - xiaohe
+  server: 149.102.132.184
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: g5h5jleTRSyO3Rk4
+- name: 🇬🇧 英国 (United Kingdom) 07 - xiaohe
   server: 51.77.225.200
   port: 8388
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: zRZNBszYyWo5
-- name: 🇬🇧 英国 (United Kingdom) 12 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 08 - xiaohe
+  server: 13.135.199.253
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 09 - xiaohe
+  server: 35.177.67.165
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 10 - xiaohe
   server: 51.89.194.151
   port: 2053
   udp: true
@@ -116,8 +79,26 @@ proxies:
     short-id: d051f678212f9d54
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 13 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 11 - xiaohe
   server: 146.70.61.18
+  port: 8080
+  udp: true
+  type: ss
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇬🇧 英国 (United Kingdom) 12 - xiaohe
+  server: 178.107.58.80
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d0b32482-67aa-426d-8735-ab6c7ceb65bd
+  flow: xtls-rprx-vision
+  tls: true
+  servername: cdn.intercom-home.online
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 13 - xiaohe
+  server: 146.70.23.32
   port: 8080
   udp: true
   type: ss
@@ -135,54 +116,27 @@ proxies:
     public-key: s0ypPx0AL3k2KOk74tbm-aE-i7eIR_MYVzfLHZeLaUk
     short-id: 2e124af254a65e7c
   servername: tomaz1337shellbuy.vvzzkontaktezzvv.garden
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 15 - xiaohe
-  server: 146.70.23.32
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 16 - xiaohe
-  server: 23.81.34.204
-  port: 443
-  udp: true
-  type: vless
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  servername: speed.cloudflare.com
   client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 17 - xiaohe
-  server: 146.70.61.37
-  port: 8080
-  udp: true
-  type: ss
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧 英国 (United Kingdom) 18 - xiaohe
-  server: 23.81.36.148
-  port: 1222
-  udp: true
-  type: vless
-  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
-  tls: true
-  reality-opts:
-    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
-    short-id: a25d0f
-  servername: www.forvo.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 19 - xiaohe
-  server: 149.102.149.207
+- name: 🇬🇧 英国 (United Kingdom) 15 - xiaohe
+  server: 3.10.142.119
   port: 443
   udp: true
   type: ss
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-- name: 🇬🇧 英国 (United Kingdom) 20 - xiaohe
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇬🇧 英国 (United Kingdom) 16 - xiaohe
+  server: 46.250.250.149
+  port: 2053
+  udp: true
+  type: vless
+  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+  tls: true
+  reality-opts:
+    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+    short-id: 9922313fffed1c63
+  servername: www.apple.com
+  client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 17 - xiaohe
   server: 57.129.132.223
   port: 80
   udp: true
@@ -195,34 +149,7 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: 🇬🇧 英国 (United Kingdom) 21 - xiaohe
-  server: 31.76.62.32
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8e66d40e-6f62-4243-a7d8-ebe83e4c2e77
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: C4kK4uxh9a5ym0-JmcaTwkUwkB0FTRjSAIlHLTKRHlo
-    short-id: 84341e3e
-  servername: lv-rix-1.koolb.org
-  client-fingerprint: safari
-- name: 🇬🇧 英国 (United Kingdom) 22 - xiaohe
-  server: 13.40.42.59
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇬🇧 英国 (United Kingdom) 23 - xiaohe
-  server: 94.156.250.148
-  port: 7001
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-- name: 🇬🇧 英国 (United Kingdom) 24 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 18 - xiaohe
   server: 45.12.69.152
   port: 443
   udp: true
@@ -231,99 +158,107 @@ proxies:
   tls: true
   servername: rnxq-1lpi3m.linmeisoft.com
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: edge
   network: ws
   ws-opts:
     path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
     headers:
       Host: rnxq-1lpi3m.linmeisoft.com
-- name: 🇬🇧 英国 (United Kingdom) 25 - xiaohe
-  server: 144.48.11.97
-  port: 43000
+- name: 🇬🇧 英国 (United Kingdom) 19 - xiaohe
+  server: laga19.api3-max.ru
+  port: 443
   udp: true
   type: vless
-  uuid: 4799abf0-d0d9-4a46-9c31-b1f76ae00e1e
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: laga19.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 20 - xiaohe
+  server: laga16.api3-max.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: laga16.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 21 - xiaohe
+  server: lagad17.api3-max.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: lagad17.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 22 - xiaohe
+  server: laga18.api3-max.ru
+  port: 443
+  udp: true
+  type: vless
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
+  tls: true
+  servername: laga18.api3-max.ru
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 23 - xiaohe
+  server: 95.85.224.51
+  port: 443
+  udp: true
+  type: vless
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: lmT0SFJL1A8_ariRWL65dhShaqFbpitjGanv7EFnoR0
-    short-id: 725e6ea0
-  servername: 144.48.11.97
-  client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 26 - xiaohe
-  server: 149.102.149.207
-  port: 80
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: LXchLsIwtCeUAUgu
-- name: 🇬🇧 英国 (United Kingdom) 27 - xiaohe
-  server: 46.250.240.80
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 948df76f-505d-4608-9c76-a933ee3ccc76
-  tls: true
-  reality-opts:
-    public-key: CYFeysLf--_IVhxQOCd3ZxLrAVWFFOkJzvIGHOVXN3E
-    short-id: 4cc9dc65f7770115
-  servername: www.cloudflare.com
-  client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 28 - xiaohe
-  server: 46.250.250.149
-  port: 2053
-  udp: true
-  type: vless
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  tls: true
-  reality-opts:
-    public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-    short-id: 9922313fffed1c63
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇬🇧 英国 (United Kingdom) 29 - xiaohe
-  server: 172.67.142.177
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  servername: max.ru
+  client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 24 - xiaohe
+  server: laga20.api3-max.ru
   port: 443
   udp: true
-  type: vmess
-  uuid: af4399b8-a152-486b-9cf6-acdd42d6c40c
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: b8254d35-1cb0-4b74-8f7f-d2bc985196a0
+  flow: xtls-rprx-vision
   tls: true
-  servername: uk.lovehk.xyz
+  servername: laga20.api3-max.ru
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /London3
-    headers:
-      Host: uk.lovehk.xyz
-- name: 🇬🇧 英国 (United Kingdom) 30 - xiaohe
+  client-fingerprint: firefox
+- name: 🇬🇧 英国 (United Kingdom) 25 - xiaohe
   server: 107.181.151.39
   port: 443
   udp: true
   type: vless
-  uuid: 4d017db2-7655-4276-9557-e2ec25b04ee7
+  uuid: ff40696b-06d6-443b-9481-8d01eddd13e1
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
     public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk
-    short-id: ee1716767f9b
-  servername: www.tradingview.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 31 - xiaohe
-  server: 87.239.249.137
+    short-id: d659da01fb94
+  servername: www.foxsports.com
+  client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 26 - xiaohe
+  server: 107.181.151.241
   port: 443
   udp: true
   type: vless
-  uuid: 67eb6b17-7797-4ded-bf52-423c4c5f6cbd
+  uuid: aded66f1-de12-4c3c-af9e-a21d6e7d9c96
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: G7bpUPFSW28-oE6ff8qZac1_apU6PiJ-GHmi7tAPDSY
-    short-id: 91af08b1ce1f
+    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
+    short-id: 2a80364e93d9
   servername: www.foxsports.com
-  client-fingerprint: chrome
-- name: 🇬🇧 英国 (United Kingdom) 32 - xiaohe
+  client-fingerprint: random
+- name: 🇬🇧 英国 (United Kingdom) 27 - xiaohe
   server: 104.238.2.82
   port: 443
   udp: true
@@ -336,19 +271,38 @@ proxies:
     short-id: b558b9305a0b
   servername: www.microsoft.com
   client-fingerprint: random
-- name: 🇬🇧 英国 (United Kingdom) 33 - xiaohe
-  server: 107.181.151.241
+- name: 🇬🇧 英国 (United Kingdom) 28 - xiaohe
+  server: 193.163.203.170
   port: 443
   udp: true
   type: vless
-  uuid: 594d466e-8ac3-4fda-b1d1-eeb817853518
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg
-    short-id: 5a018643df03
-  servername: www.microsoft.com
+    public-key: GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o
+    short-id: b28db60d77c50b4f
+  servername: yandex.ru
   client-fingerprint: chrome
+- name: 🇬🇧 英国 (United Kingdom) 29 - xiaohe
+  server: 94.156.250.148
+  port: 7001
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+- name: 🇬🇧 英国 (United Kingdom) 30 - xiaohe
+  server: 23.81.36.148
+  port: 1222
+  udp: true
+  type: vless
+  uuid: 36c3dcc2-17b6-4478-b8a7-3978e6d5afe9
+  tls: true
+  reality-opts:
+    public-key: zpLKK8HuwXJDH9D0O3t5Z_tO3ajkj7VRtXdr6UGy1zE
+    short-id: a25d0f
+  servername: www.forvo.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -384,9 +338,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 28 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 29 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 30 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 31 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 32 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 33 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -422,8 +373,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 28 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 29 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 30 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 31 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 32 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 33 - xiaohe
 rules:
 - MATCH,PROXIES
