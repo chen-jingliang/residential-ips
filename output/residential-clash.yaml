@@ -5,20 +5,33 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
-  server: 49.254.204.133
-  port: 1774
+  server: 218.237.185.234
+  port: 4652
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: 1234!@#$
-- name: 🇷🇺 俄罗斯 (Russia) 02 (家宽) - xiaohe
+  password: qwerREWQ@@
+- name: 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
+  server: 152.233.71.81
+  port: 443
+  udp: true
+  type: vless
+  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+  servername: brointelengence.com
+  client-fingerprint: random
+- name: 🇷🇺 俄罗斯 (Russia) 03 (家宽) - xiaohe
   server: 194.38.11.86
   port: 65443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: 7eadc6dbe2ae
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+- name: 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
   server: 206.1.102.81
   port: 17915
   udp: true
@@ -28,21 +41,64 @@ proxies:
   servername: googol.wookshop.ir
   skip-cert-verify: true
   client-fingerprint: chrome
+- name: 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - xiaohe
+  server: 202.144.192.76
+  port: 13779
+  udp: true
+  type: vless
+  uuid: 928e6cce-8ced-4243-9a48-a6642edd09b0
+  tls: true
+  reality-opts:
+    public-key: llTyp52oRXnJmQ3I9UUrmlwbMA79B-wLCRHCu-8dLGg
+    short-id: af1bdd293097b664
+  servername: tesla.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 06 (移动家宽) - xiaohe
+  server: test.keoplentuio.xyz
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
+- name: 🇰🇭 柬埔寨 (Cambodia) 07 (移动家宽) - xiaohe
+  server: ruot.ayucloudservices.nl
+  port: 35019
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: 9c51ca33-a332-4de5-8677-5624e940097c
+- name: 🇸🇬 新加坡 (Singapore) 08 (家宽) - xiaohe
+  server: s3.huhiuh.space
+  port: 18642
+  udp: true
+  type: hysteria2
+  password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
+  sni: s3.huhiuh.space
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 (移动家宽) - xiaohe
+  - 🇰🇭 柬埔寨 (Cambodia) 07 (移动家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 08 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 03 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 05 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 (移动家宽) - xiaohe
+  - 🇰🇭 柬埔寨 (Cambodia) 07 (移动家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 08 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
