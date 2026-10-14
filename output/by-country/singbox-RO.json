@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 01 - xiaohe",
-      "server": "154.46.31.106",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "QFWzCw2uX9B9i6qAYeFBIE"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 02 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 01 - xiaohe",
       "server": "162.249.125.133",
       "server_port": 443,
       "password": "QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s",
@@ -29,7 +21,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 03 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 02 - xiaohe",
       "server": "46.28.67.55",
       "server_port": 443,
       "uuid": "d1a6a033-fdbd-46a6-a177-3370ba042b9f",
@@ -39,7 +31,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         },
         "reality": {
           "enabled": true,
@@ -50,7 +42,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 04 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 03 - xiaohe",
       "server": "146.70.124.85",
       "server_port": 443,
       "uuid": "40abbe13-f02e-4da2-9b19-966c2c3eb4ee",
@@ -60,7 +52,7 @@
         "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -71,7 +63,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 05 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 04 - xiaohe",
       "server": "82.117.255.174",
       "server_port": 443,
       "uuid": "679439c5-28f2-485e-af5f-60a5fcd9c36c",
@@ -92,15 +84,23 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 05 - xiaohe",
       "server": "185.156.44.99",
       "server_port": 443,
       "password": "gf1:gfhysteria2024",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "185.156.44.99",
         "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - xiaohe",
+      "server": "bogging-eyeteeth-fly.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
     },
     {
       "type": "selector",

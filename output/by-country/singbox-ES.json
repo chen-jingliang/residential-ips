@@ -4,8 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇪🇸 西班牙 (Spain) 01 - xiaohe",
+      "server": "5.188.181.201",
+      "server_port": 9001,
+      "method": "aes-256-cfb",
+      "password": "UkXRsXvR6buDMG2Y"
+    },
+    {
+      "type": "vless",
+      "tag": "🇪🇸 西班牙 (Spain) 02 - xiaohe",
       "server": "212.227.235.66",
       "server_port": 2053,
       "uuid": "ead0dd61-d398-40ad-80d6-a0e1e516d7d3",
@@ -25,7 +33,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 02 - xiaohe",
+      "tag": "🇪🇸 西班牙 (Spain) 03 - xiaohe",
       "server": "46.28.71.247",
       "server_port": 443,
       "uuid": "12c53e32-e589-47d6-b857-e4132294f767",
@@ -41,26 +49,6 @@
           "enabled": true,
           "public_key": "v4MuZIvFrTPT5GHMSaPryUAbIZlLstmsUTzmC1E-JTE",
           "short_id": "0dfc23fe80778c00"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇪🇸 西班牙 (Spain) 03 - xiaohe",
-      "server": "es3.h1cloud.net",
-      "server_port": 25136,
-      "uuid": "440b5558-e701-4c6f-8de2-d24dcf1ebbe6",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "nkmfL3QCskKAfBUk-OiTgcWyIXGmXrZVtDEoio0Qo1w",
-          "short_id": "f78838fbd85e59ae"
         }
       }
     },
