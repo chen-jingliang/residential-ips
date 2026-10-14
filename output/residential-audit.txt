@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-10-13 22:50:06 UTC
+生成时间: 2026-10-14 04:30:54 UTC
 ==============================================================================
 
 说明:
@@ -15,84 +15,6 @@
   · 复核建议 : 把 exit_ip 贴进 https://scamalytics.com/ip/<IP> 与
                https://bgp.he.net/ip/<IP> 看 ASN 归属是否真是民用运营商
 
-本轮家宽节点数: 8
+本轮家宽节点数: 0
 
-[1] KR  严格家宽  置信度 82
-     exit_ip : 218.237.185.234
-     server  : 218.237.185.234:4652  (shadowsocks)
-     ASN     : AS9318 SK Broadband Co Ltd
-     ISP     : SK Broadband Co Ltd
-     ORG     : broadNnet
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=SK Broadband Co Ltd asn=AS9318 SK Broadband Co Ltd
-     fraud   : 2  (-1 = 未取到评分)
-
-[2] FI  严格家宽  置信度 70
-     exit_ip : 169.40.34.2
-     server  : 152.233.71.81:443  (vless)
-     ASN     : AS9304 HGC Global Communications Limited
-     ISP     : HGC Global Communications Limited
-     ORG     : -
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Internet Utilities Europe and Asia Limited asn=AS198077 Need, L.L.C.-FZ
-     fraud   : 33  (-1 = 未取到评分)
-
-[3] RU  严格家宽  置信度 71
-     exit_ip : 194.38.11.86
-     server  : 194.38.11.86:65443  (shadowsocks)
-     ASN     : AS199669 Okay-Telecom Ltd.
-     ISP     : Okay-Telecom Ltd.
-     ORG     : Park-Web LLC
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Park-Web LLC asn=AS199669 Okay-Telecom Ltd.
-     fraud   : 0  (-1 = 未取到评分)
-
-[4] TR  移动网络  置信度 85
-     exit_ip : 2a01:f900:12:be::1
-     server  : 206.1.102.81:17915  (vless)
-     ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
-     ISP     : Netlen Internet Hizmetleri Ltd. Sti.
-     ORG     : Netlen Internet Hizmetleri Ltd. Sti
-     ip-api  : hosting=False proxy=False mobile=True reverse=-
-     ipapi.is: company=Netlen Internet asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
-     fraud   : 33  (-1 = 未取到评分)
-
-[5] HK  严格家宽  置信度 71
-     exit_ip : 2402:c480:3000:1514:1c00:c4ff:fe00:5a0
-     server  : 202.144.192.76:13779  (vless)
-     ASN     : AS63916 IPTELECOM Global
-     ISP     : Techavenue International Ltd
-     ORG     : Techavenue International Ltd
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=Techavenue International Ltd asn=AS63916 Techavenue International Ltd
-     fraud   : 0  (-1 = 未取到评分)
-
-[6] TR  移动网络  置信度 85
-     exit_ip : 2a01:f900:12:216::1
-     server  : test.keoplentuio.xyz:2053  (vless)
-     ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
-     ISP     : Netlen Internet Hizmetleri Ltd. Sti.
-     ORG     : Netlen Internet Hizmetleri Ltd. Sti
-     ip-api  : hosting=False proxy=False mobile=True reverse=-
-     ipapi.is: company=Netlen Internet asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
-     fraud   : 33  (-1 = 未取到评分)
-
-[7] KH  移动网络  置信度 85
-     exit_ip : 220.158.233.28
-     server  : ruot.ayucloudservices.nl:35019  (shadowsocks)
-     ASN     : AS38623 ISP/IXP IN CAMBODIA WITH THE BEST VERVICE IN THERE.
-     ISP     : BUCT
-     ORG     : VIETTEL (CAMBODIA) PTE., LTD
-     ip-api  : hosting=False proxy=False mobile=True reverse=-
-     ipapi.is: company=BUCT COMMUNICATION asn=AS38623 VIETTEL (CAMBODIA) PTE., LTD
-     fraud   : 0  (-1 = 未取到评分)
-
-[8] SG  严格家宽  置信度 82
-     exit_ip : 202.156.27.133
-     server  : s3.huhiuh.space:18642  (hysteria2)
-     ASN     : AS4657 StarHub Ltd
-     ISP     : StarHub Cable Vision Ltd
-     ORG     : SGCABLEVISION
-     ip-api  : hosting=False proxy=False mobile=False reverse=-
-     ipapi.is: company=StarHub Cable Vision Ltd asn=AS4657 Starhub Ltd.
-     fraud   : 0  (-1 = 未取到评分)
+(本轮无节点通过家宽判定)
