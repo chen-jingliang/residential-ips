@@ -7,11 +7,20 @@
       "type": "vless",
       "tag": "🌐 其他地区 (Other) 01 - xiaohe",
       "server": "hikvision-plus.com",
-      "server_port": 2052,
-      "uuid": "26769ac3-b34c-430a-87f8-e1de14619d25",
+      "server_port": 2053,
+      "uuid": "e3fb01b6-69b4-41d7-babf-696d992de194",
+      "tls": {
+        "enabled": true,
+        "server_name": "uwu.blueknightnet.qzz.io",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/@BlueKnight_net--@BlueKnight_net",
+        "path": "/@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net",
         "headers": {
           "Host": "uwu.blueknightnet.qzz.io"
         }

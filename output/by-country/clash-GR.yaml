@@ -4,29 +4,30 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇩 印尼 (Indonesia) 01 - xiaohe
-  server: 103.172.197.2
-  port: 29172
+- name: 🇬🇷 希腊 (Greece) 01 - xiaohe
+  server: 157.228.160.166
+  port: 443
   udp: true
   type: vless
-  uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
-  servername: aws.amazon.com
+    public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M
+    short-id: 3cef317b
+  servername: addons.mozilla.org
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇩 印尼 (Indonesia) 01 - xiaohe
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
+  server: fin-2.povrak.ir
+  port: 56268
+  udp: true
+  type: vmess
+  uuid: 9a53a545-53e3-4fce-a0ba-5cfc3c4e5a74
+  alterId: 0
+  cipher: auto
+- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
   server: 95.216.27.15
   port: 2053
   udp: true
@@ -16,25 +24,63 @@ proxies:
     short-id: d368b94e275ab080
   servername: www.google.com
   client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 65.108.3.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 90ec9bba2019
-  servername: web.eitaa.com
-  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
   server: edge10.cyrionflare.com
   port: 2052
   udp: true
   type: vless
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  server: 109.172.54.135
+  port: 8444
+  udp: true
+  type: vless
+  uuid: f55e9aba-7b14-4f6f-b59a-d5b3d45c9309
+  tls: true
+  reality-opts:
+    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
+  servername: github.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  server: fi-p1.h1cloud.net
+  port: 25634
+  udp: true
+  type: vless
+  uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b
+  tls: true
+  reality-opts:
+    public-key: xjmKTfAwtZNtyMrfGSo1a-Xc807CIdJXsboMsDMROFA
+    short-id: 12e9af979082beab
+  servername: www.icloud.com
+  client-fingerprint: ''
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 2894574fe211
+- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  server: fi-p1.h1cloud.net
+  port: 25481
+  udp: true
+  type: vless
+  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
+  tls: true
+  reality-opts:
+    public-key: mhIAHuZIEr2NpdGGSeOxar7VRSgEfVoNwb_G8Y0073E
+    short-id: 3b84fc70657725af
+  servername: www.bing.com
+  client-fingerprint: random
+  network: grpc
+  grpc-opts:
+    grpc-service-name: 8cb5baa18cd7
+- name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
+  server: b2a2.velqixa.ir
+  port: 39221
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: Pzlcb_PeV3uRgiC2NNoNKw
 proxy-groups:
 - name: PROXIES
   type: select
@@ -43,6 +89,10 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -51,5 +101,9 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 01 - xiaohe
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 07 - xiaohe
 rules:
 - MATCH,PROXIES
