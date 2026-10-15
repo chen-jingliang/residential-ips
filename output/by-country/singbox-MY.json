@@ -16,9 +16,30 @@
       }
     },
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
-      "server": "104.21.23.80",
+      "server": "my2.oh-node.com",
+      "server_port": 443,
+      "uuid": "7cfd34ae-edad-4cc5-9d6f-066f7add7829",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.setel.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "R6q8qhMxgq3ynJPUgudaRkcDXj0qgoc_UU1N0SWGLwM",
+          "short_id": "ed77ac35a310"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe",
+      "server": "172.67.205.213",
       "server_port": 443,
       "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
       "security": "auto",
@@ -41,7 +62,8 @@
       "outbounds": [
         "auto",
         "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe"
       ]
     },
     {
@@ -49,7 +71,8 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
-        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
