@@ -1,6 +1,6 @@
 ==============================================================================
 家宽判定审计单 / Residential IP Audit
-生成时间: 2026-10-14 21:47:30 UTC
+生成时间: 2026-10-15 04:10:22 UTC
 ==============================================================================
 
 说明:
@@ -15,10 +15,50 @@
   · 复核建议 : 把 exit_ip 贴进 https://scamalytics.com/ip/<IP> 与
                https://bgp.he.net/ip/<IP> 看 ASN 归属是否真是民用运营商
 
-本轮家宽节点数: 1
+本轮家宽节点数: 5
 
-[1] TW  严格家宽  置信度 82
-     exit_ip : 61.224.76.121
+[1] US  严格家宽  置信度 82
+     exit_ip : 71.168.153.36
+     server  : 104.18.0.1:443  (vless)
+     ASN     : AS701 Verizon Business
+     ISP     : Verizon Business
+     ORG     : Verizon Business
+     ip-api  : hosting=False proxy=False mobile=False reverse=-
+     ipapi.is: company=Verizon Business asn=AS701 Verizon Business
+     fraud   : 4  (-1 = 未取到评分)
+
+[2] TR  移动网络  置信度 85
+     exit_ip : 2a01:f900:12:169::1
+     server  : 206.1.102.64:8080  (vmess)
+     ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
+     ISP     : Netlen Internet Hizmetleri Ltd. Sti.
+     ORG     : Netlen Internet Hizmetleri Ltd. Sti
+     ip-api  : hosting=False proxy=False mobile=True reverse=-
+     ipapi.is: company=Netlen Internet asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
+     fraud   : 33  (-1 = 未取到评分)
+
+[3] FI  严格家宽  置信度 70
+     exit_ip : 169.40.34.9
+     server  : 152.233.71.81:443  (vless)
+     ASN     : AS9304 HGC Global Communications Limited
+     ISP     : HGC Global Communications Limited
+     ORG     : -
+     ip-api  : hosting=False proxy=False mobile=False reverse=-
+     ipapi.is: company=Internet Utilities Europe and Asia Limited asn=AS198077 Need, L.L.C.-FZ
+     fraud   : 33  (-1 = 未取到评分)
+
+[4] TR  移动网络  置信度 85
+     exit_ip : 2a01:f900:12:216::1
+     server  : test.keoplentuio.xyz:2053  (vless)
+     ASN     : AS44620 Netlen Internet Hizmetleri Ltd. Sti.
+     ISP     : Netlen Internet Hizmetleri Ltd. Sti.
+     ORG     : Netlen Internet Hizmetleri Ltd. Sti
+     ip-api  : hosting=False proxy=False mobile=True reverse=-
+     ipapi.is: company=Netlen Internet asn=AS44620 Netlen Internet Hizmetleri Ltd. Sti.
+     fraud   : 33  (-1 = 未取到评分)
+
+[5] TW  严格家宽  置信度 82
+     exit_ip : 61.224.126.40
      server  : fujrdt.d6f54hd1j.cc:443  (vmess)
      ASN     : AS3462 Data Communication Business Group
      ISP     : Chunghwa Telecom Co., Ltd.

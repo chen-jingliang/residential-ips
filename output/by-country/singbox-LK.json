@@ -11,7 +11,10 @@
       "uuid": "fcdb24e3-5e66-4c45-b89e-ac9441f4dcda",
       "transport": {
         "type": "ws",
-        "path": "/"
+        "path": "/",
+        "headers": {
+          "Host": "free.sahanwickramasinghe.me"
+        }
       }
     },
     {
