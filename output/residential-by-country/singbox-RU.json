@@ -5,25 +5,25 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇭🇷 克罗地亚 (Croatia) 01 - xiaohe",
-      "server": "ruot.ayucloudservices.nl",
-      "server_port": 35193,
-      "method": "aes-128-gcm",
-      "password": "c855b71e-f3c2-442a-9429-0844eb4346c5"
+      "tag": "🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe",
+      "server": "194.38.11.86",
+      "server_port": 65443,
+      "method": "aes-256-cfb",
+      "password": "7eadc6dbe2ae"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇷 克罗地亚 (Croatia) 01 - xiaohe"
+        "🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇷 克罗地亚 (Croatia) 01 - xiaohe"
+        "🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
