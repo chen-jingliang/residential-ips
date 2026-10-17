@@ -4,28 +4,24 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇶 IQ 01 - xiaohe
-  server: 172.64.80.1
-  port: 443
+- name: 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
+  server: 194.38.11.86
+  port: 65443
   udp: true
-  type: trojan
-  password: bpb-trojan
-  sni: vless.herogoing.top
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇶 IQ 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES

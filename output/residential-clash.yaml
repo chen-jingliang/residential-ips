@@ -4,86 +4,39 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇺 MU 01 (家宽) - xiaohe
-  server: 45.131.210.30
-  port: 8880
+- name: 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
+  server: 194.38.11.86
+  port: 65443
   udp: true
-  type: vless
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime05.workers.dev
-- name: 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
-  server: 172.67.214.106
-  port: 443
-  udp: true
-  type: trojan
-  password: 5ffee9b2-4514-4719-97b3-67810ece038d
-  sni: ali-panel-1.terhav.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /vertex
-- name: 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
-  server: 177.3.208.65
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
+  server: 152.233.71.81
   port: 443
   udp: true
   type: vless
-  uuid: 4f34bc04-479c-49ba-91a8-6bb9ed15031c
+  uuid: 741809be-e44e-000b-b411-bf66f0ae3860
+  flow: xtls-rprx-vision
   tls: true
-  servername: tgmansion.site
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /vless-tr
-- name: 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
-  server: 144.24.140.37
-  port: 443
-  udp: true
-  type: vless
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  tls: true
-  servername: wzs.echo.net.eu.org
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HV1ZNVwcHTQsJSgAJVBQUG0dCQEwWAx4AAg4c
-    headers:
-      Host: wzs.echo.net.eu.org
-- name: 🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe
-  server: 183.109.131.75
-  port: 20086
-  udp: true
-  type: vmess
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+  servername: brointelengence.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇺 MU 01 (家宽) - xiaohe
-  - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇺 MU 01 (家宽) - xiaohe
-  - 🇺🇸 美国 (United States) 02 (家宽) - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 (移动家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 (家宽) - xiaohe
-  - 🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 01 (家宽) - xiaohe
+  - 🇫🇮 芬兰 (Finland) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
