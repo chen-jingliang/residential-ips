@@ -24,6 +24,21 @@ proxies:
     short-id: 23d0950d60bc0d5b
   servername: gateway.icloud.com
   client-fingerprint: chrome
+- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
+  server: 1f0c1c7297521d51.wgse.info
+  port: 443
+  udp: true
+  type: vless
+  uuid: d78d6815-5f00-4fe3-8aae-3344aeb7783f
+  tls: true
+  servername: 1f0c1c7297521d51.wgse.info
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: 1f0c1c7297521d51.wgse.info
 proxy-groups:
 - name: PROXIES
   type: select
@@ -31,6 +46,7 @@ proxy-groups:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -38,5 +54,6 @@ proxy-groups:
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
   - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 rules:
 - MATCH,PROXIES
